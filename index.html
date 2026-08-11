@@ -461,6 +461,7 @@
       gap: 0.3rem;
       width: 100%;
       margin-top: 0.1rem;
+      justify-content: center;
     }
 
     .tag-pill {
@@ -833,7 +834,7 @@
         : `<span class="item-icon-big" style="background:var(--pink)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
       const tagsDetailHtml = s.tags && s.tags.length ? `
-    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:3rem;">
+    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:1rem;">
       ${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
     </div>
   ` : "";
@@ -873,12 +874,12 @@
         ${bigIcon}
         <h1>${s.name}</h1>
         ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
+        ${tagsDetailHtml}
         <div class="detail-article-card">
           <div class="detail-article-body">
             ${formattedMeaning}
           </div>
         </div>
-        ${tagsDetailHtml}
       </div>
       ${hasEps ? `<div class="mode-hint" style="margin:1.5rem 0 0.5rem; text-align:left;">「${s.name}」に関連する漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
     </section>
