@@ -20,7 +20,7 @@
   <style>
     :root {
       --line: #1a1a1a;
-      --sub: #2c2c2c;
+      --sub: #393835;
       --brown: #6b6455;
       --white: #FFFFFF;
       --cream: #fbf6ed;
@@ -104,7 +104,7 @@
       font-weight: 900;
       line-height: 1.4;
       letter-spacing: 0.01em;
-      margin-bottom: 1rem;
+      margin-bottom: 0.4rem;
     }
 
     h2 {
@@ -330,28 +330,8 @@
       text-align: left;
     }
 
-    .ep-card:nth-child(4n + 2) {
-      background: var(--blue);
-    }
-
-    .ep-card:nth-child(4n + 2) .eyebrow {
+    .ep-card:nth-child(2n) .eyebrow {
       background: var(--green);
-    }
-
-    .ep-card:nth-child(4n + 3) {
-      background: var(--green);
-    }
-
-    .ep-card:nth-child(4n + 3) .eyebrow {
-      background: var(--pink);
-    }
-
-    .ep-card:nth-child(4n) {
-      background: var(--pink);
-    }
-
-    .ep-card:nth-child(4n) .eyebrow {
-      background: var(--mustard);
     }
 
     .ep-card-title {
@@ -400,7 +380,7 @@
       font-size: 1rem;
       line-height: 1.75;
       font-weight: 600;
-      color: var(--sub);
+      color: var(--line);
       margin-bottom: 1rem;
       letter-spacing: -0.01em;
     }
@@ -716,7 +696,7 @@
 
     function renderCategoryList() {
       topbarEl.innerHTML = `
-      <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 戻る</button>
+      <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 前に戻る</button>
       <span class="crumb">Stage1 / 視覚のしかけから</span>
     `;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
@@ -788,7 +768,7 @@
       <div class="eyebrow"><i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
       <h2>「${heading}」</h2>
       <p class="lead" style="margin-top:0.4rem;">${wordDescription}</p>
-      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem; color:var(--line);"><i class="fa-solid fa-lightbulb"></i> こんな「しかけ」が関係しているかも</p>
+      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem;"><i class="fa-solid fa-lightbulb"></i> こんな「しかけ」が関係しているかも</p>
       <div class="badge-grid">${subBadges}</div>
     </section>
   `;
@@ -830,7 +810,7 @@
       <div class="eyebrow"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</div>
       <h2>${cat.name}のしかけ</h2>
       <p class="lead">${cat.meaning}</p>
-      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem; color:var(--line);"><i class="fa-solid fa-lightbulb"></i> 例えば、こんな「${cat.name}のしかけ」があるよ</p>
+      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem;"><i class="fa-solid fa-lightbulb"></i> 例えば、こんな「${cat.name}のしかけ」があるよ</p>
       <div class="badge-grid">${badges}</div>
     </section>
   `;
@@ -845,7 +825,7 @@
       const cat = CATEGORIES.find(c => c.key === (s.cat || catKey)) || { name: "", icon: "star" };
 
       topbarEl.innerHTML = `
-    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> ${cat.name}に戻る</button>`;
+    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 前に戻る</button>`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const bigIcon = s.swatch
@@ -892,7 +872,7 @@
       <div style="text-align:center;">
         ${bigIcon}
         <h1>${s.name}</h1>
-        ${s.summary ? `<div class="lead">${s.summary}</div>` : ''}
+        ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
         <div class="detail-article-card">
           <div class="detail-article-body">
             ${formattedMeaning}
@@ -900,7 +880,7 @@
         </div>
         ${tagsDetailHtml}
       </div>
-      ${hasEps ? `<div class="mode-hint" style="margin:1.5rem 0 0.5rem; text-align:left;">「${s.name}」をテーマにした漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
+      ${hasEps ? `<div class="mode-hint" style="margin:1.5rem 0 0.5rem; text-align:left;">「${s.name}」に関連する漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
     </section>
   `;
     }
