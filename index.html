@@ -334,12 +334,24 @@
       background: var(--blue);
     }
 
+    .ep-card:nth-child(4n + 2) .eyebrow {
+      background: var(--green);
+    }
+
     .ep-card:nth-child(4n + 3) {
       background: var(--green);
     }
 
+    .ep-card:nth-child(4n + 3) .eyebrow {
+      background: var(--pink);
+    }
+
     .ep-card:nth-child(4n) {
       background: var(--pink);
+    }
+
+    .ep-card:nth-child(4n) .eyebrow {
+      background: var(--mustard);
     }
 
     .ep-card-title {
@@ -466,20 +478,21 @@
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.25rem;
+      gap: 0.3rem;
       justify-content: center;
       width: 100%;
       margin-top: 0.1rem;
     }
 
     .tag-pill {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       font-weight: 700;
       color: #555;
       background: var(--cream);
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 0.1rem 0.4rem;
+      padding: 0.2rem 0.4rem;
+      letter-spacing: -0.04em;
       line-height: 1.2;
       white-space: nowrap;
     }
@@ -841,7 +854,7 @@
         : `<span class="item-icon-big" style="background:var(--pink)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
       const tagsDetailHtml = s.tags && s.tags.length ? `
-    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:3rem; gap:0.3rem;">
+    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:3rem;">
       ${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
     </div>
   ` : "";
@@ -852,21 +865,35 @@
         : `<p>${s.meaning}</p>`;
 
       const hasEps = s.episodes && s.episodes.length;
-      const eps = hasEps ? s.episodes.map(ep => `
-    <div class="ep-card">
-      <span class="item-icon-big" style="background:var(--white);margin-bottom:0;"><i class="fa-brands fa-square-instagram"></i></span>
-      <div class="ep-card-title">${ep.title}</div>
-      <a class="ep-link-btn" href="${ep.url || '#'}" target="_blank" rel="noopener">
-        <span class="row-title">Instagramで読む</span><span class="arrow"><i class="fa-solid fa-up-right-from-square"></i></span>
-      </a>
-    </div>
-  `).join("") : ``;
+      const eps = hasEps ? s.episodes.map(ep => {
+        const volBadge = ep.vol ? `<span class="eyebrow">${ep.vol}</span>` : '';
+        const artistsHtml = ep.artists && ep.artists.length ? `
+          <div class="tag-list">
+            ${ep.artists.map(a => `<span class="tag-pill">${a}</span>`).join('')}
+          </div>
+        ` : '';
+
+        return `
+          <div class="ep-card">
+            <div class="ep-card-top">
+              ${volBadge}
+              <div class="ep-card-title">${ep.title}</div>
+            </div>
+            ${artistsHtml}
+            <a class="ep-link-btn" href="${ep.url || '#'}" target="_blank" rel="noopener">
+              <span>Instagramで読む</span>
+              <i class="fa-solid fa-up-right-from-square"></i>
+            </a>
+          </div>
+        `;
+      }).join("") : ``;
 
       viewEl.innerHTML = `
     <section class="section no-border slide" style="background:var(--cream);padding-bottom:0;">
       <div style="text-align:center;">
         ${bigIcon}
         <h1>${s.name}</h1>
+        ${s.summary ? `<div class="lead">${s.summary}</div>` : ''}
         <div class="detail-article-card">
           <div class="detail-article-body">
             ${formattedMeaning}
