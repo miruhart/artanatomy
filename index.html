@@ -461,17 +461,17 @@
       gap: 0.3rem;
       width: 100%;
       margin-top: 0.1rem;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .tag-pill {
       font-size: 0.7rem;
       font-weight: 700;
-      color: #555;
-      background: var(--cream);
-      border: 1px solid var(--line);
+      color: var(--line);
+      background: var(--white);
+      border: 2px solid var(--line);
       border-radius: 999px;
-      padding: 0.2rem 0.4rem;
+      padding: 0.2rem 0.6rem;
       letter-spacing: -0.04em;
       line-height: 1.2;
       white-space: nowrap;
@@ -479,11 +479,7 @@
 
     .tag-pill-lg {
       font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--line);
       letter-spacing: 0.04em;
-      background: var(--white);
-      border: 2px solid var(--line);
       border-radius: 999px;
       padding: 0.5rem 0.75rem;
     }
@@ -834,7 +830,7 @@
         : `<span class="item-icon-big" style="background:var(--pink)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
       const tagsDetailHtml = s.tags && s.tags.length ? `
-    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:1rem;">
+    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:1rem;justify-content:center;">
       ${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
     </div>
   ` : "";
@@ -849,7 +845,7 @@
         const volBadge = ep.vol ? `<span class="eyebrow">${ep.vol}</span>` : '';
         const artistsHtml = ep.artists && ep.artists.length ? `
           <div class="tag-list">
-            ${ep.artists.map(a => `<span class="tag-pill">${a}</span>`).join('')}
+            ${ep.artists.map(a => `<span class="tag-pill"># ${a}</span>`).join('')}
           </div>
         ` : '';
 
