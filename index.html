@@ -381,7 +381,12 @@
       -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 
-      /* ▼ ふわっと表示のアニメーション指定 */
+      /* ▼ 最初は透明にして表示を待つ */
+      opacity: 0;
+    }
+
+    /* ▼ 画像のロードが完了したらアニメーション発火 */
+    .detail-article-image.is-loaded {
       animation: fadeInUp 1.2s ease-out forwards;
     }
 
@@ -909,7 +914,7 @@
         <h1>${s.name}</h1>
         ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
         ${tagsDetailHtml}
-        ${s.image ? `<img class="detail-article-image" src="assets/scene/${s.image}.png">` : ''}
+        ${s.image ? `<img class="detail-article-image" src="assets/scene/${s.image}.png" onload="this.classList.add('is-loaded')">` : ''}
         <div class="detail-article-card">
           <div class="detail-article-body">
             ${formattedMeaning}
