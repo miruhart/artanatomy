@@ -134,6 +134,7 @@ const STAGE1_DATA = {
       emotions: ["relaxed", "unease"],
       swatch: "#4caf6a",
       summary: "光ひとつで豹変する安心と不気味な色",
+      image: "green",
       tags: ["#ざわざわ", "#毒気", "#ホッとする", "#ヒヤッとする"],
       meaning: "緑は自然の象徴であり、本来は人が最も心を許す安心の色。しかし異質な光や影と組み合わさると「見慣れたはずのものが怪しくなる」という脳の警戒スイッチが入り、一転して毒気や不気味さに豹変する。",
       episodes: [
@@ -370,6 +371,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "excite"],
       summary: "塗料の山が生みだす立体の影",
       tags: ["#ゾクゾク", "#圧倒される", "#生々しい"],
+      image: "impasto",
       meaning: "絵の具をキャンバスの上に立体的に盛り上げる技法。光が当たることで実際の影ができ、強烈な質感と存在感を生み出す。",
       episodes: [
         {
@@ -469,6 +471,7 @@ const STAGE1_DATA = {
       emotions: ["intellectual"],
       summary: "理由なしに心地よい究極の比率",
       tags: ["#ピタッとはまる", "#なるほど！", "#すっきり"],
+      image: "goldenratio",
       meaning: "自然界や建築にも見られる最も美しいとされる比率。数学的に計算された配置が、理由なしの心地よさと美しい秩序を生み出す。"
     },
     {
@@ -551,6 +554,7 @@ const STAGE1_DATA = {
       emotions: ["intellectual", "immersed"],
       summary: "顔よりも雄弁に本音をつぶやく",
       tags: ["#なるほど！", "#ハッとする", "#引き込まれる"],
+      image: "hands",
       meaning: "指先のわずかな形や角度は、表情以上にその人の本音や祈りを雄弁に語る。言葉を持たない手から、秘められた感情がまっすぐに伝わってくる。",
       episodes: [
         {
@@ -566,6 +570,7 @@ const STAGE1_DATA = {
       emotions: ["relaxed"],
       summary: "身体を大きく伸ばす解放の快感",
       tags: ["#スカッとする", "#軽やか", "#開放感"],
+      image: "stretch",
       meaning: "大きく体を伸ばしたり反らせたりしたポーズは、見ているこちらの身体の強張りまで解き放ち、深い呼吸を誘うような心地よさを生む。"
     },
     {
