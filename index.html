@@ -366,6 +366,30 @@
     }
 
     /* ---- 詳細ページの長文解説スタイル ---- */
+    .detail-article-image {
+      position: relative;
+      width: calc(100vw + 2rem);
+      height: 100vw;
+      max-width: 32rem;
+      max-height: 32rem;
+      border-radius: 100% 100% 0 0;
+      overflow: hidden;
+      object-fit: cover;
+      margin-bottom: -1rem;
+      z-index: -1;
+      margin-left: -2rem;
+      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+
+    @media (min-width: 32rem) {
+      .detail-article-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
     .detail-article-card {
       background: var(--white);
       border: var(--border);
@@ -871,6 +895,7 @@
         <h1>${s.name}</h1>
         ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
         ${tagsDetailHtml}
+        ${s.image ? `<img class="detail-article-image" src="assets/scene/${s.image}.png">` : ''}
         <div class="detail-article-card">
           <div class="detail-article-body">
             ${formattedMeaning}

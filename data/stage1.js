@@ -85,6 +85,7 @@ const STAGE1_DATA = {
       emotions: ["excite"],
       swatch: "#e5484d",
       summary: "脈拍をあげる情熱と命の色",
+      image: "red",
       tags: ["#ドキドキ", "#血が騒ぐ", "#テンションが上がる", "#危険"],
       meaning: "赤は血や火を連想させる強い色。見つめるだけで人の脈拍が上がり、主役の激しい感情や一番目立たせたい場所を印象づける。",
       episodes: [
@@ -101,6 +102,7 @@ const STAGE1_DATA = {
       emotions: ["immersed", "relaxed"],
       swatch: "#3b6fd4",
       summary: "心をなだめる深い静寂と広がり",
+      image: "blue",
       tags: ["#うっとり", "#引き込まれる", "#心が鎮まる", "#広々"],
       meaning: "青は空や海、広大な宇宙を連想させ、心を穏やかに鎮める色。絵画では深い静けさや孤独、奥へ引き込まれる奥行き感を演出する。",
       episodes: [
@@ -124,6 +126,7 @@ const STAGE1_DATA = {
       swatch: "#ffd400",
       summary: "脳を直撃する希望と光の合図",
       tags: ["#ワクワク", "#ハッとする", "#テンションが上がる"],
+      image: "yellow",
       meaning: "黄色は自然界の太陽や実りを象徴し、脳へ素早く届く明るい色。一滴あるだけで画面に希望や喜びをもたらし、強い注目を集める。"
     },
     {
@@ -210,6 +213,7 @@ const STAGE1_DATA = {
       key: "warmcool", name: "暖色・寒色", icon: "temperature-half", cat: "color",
       emotions: ["excite"],
       swatch: "linear-gradient(90deg, #e5484d, #3b6fd4)",
+      image: "warmcool",
       summary: "温度の感覚で感情を揺さぶる",
       tags: ["#ドキドキ", "#ハッとする", "#テンションが上がる"],
       meaning: "温もりを感じる暖色とひんやり冷たい寒色。色が持つ温度の感覚が、見る人の身体感覚や感情をダイレクトに揺さぶる。"
@@ -273,6 +277,7 @@ const STAGE1_DATA = {
       key: "moonlight", name: "月光", icon: "moon", cat: "light",
       emotions: ["immersed", "unease"],
       summary: "夜の静けさと秘密の時間",
+      image: "moonlight",
       tags: ["#しんみり", "#ざわざわ", "#静まる"],
       meaning: "青白く静かに照らす月明かりやランタンの灯火は、心を落ち着かせる反面、暗闇の影が生みだす密かな不安や謎めいた雰囲気を漂わせる。"
     },
@@ -324,6 +329,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "excite"],
       summary: "スポットライトが照らす緊張感",
       tags: ["#息を呑む", "#ドキドキ", "#圧倒される"],
+      image: "chiaroscuro",
       meaning: "光と影の差を激しくつけ、スポットライトを当てたような立体感を演出する。静かな絵を一瞬で緊張感あふれる舞台へと変える。",
       episodes: [
         {
