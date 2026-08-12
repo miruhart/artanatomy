@@ -263,6 +263,7 @@ const STAGE1_DATA = {
       emotions: ["immersed", "relaxed"],
       summary: "木漏れ日のような優しい包容力",
       tags: ["#うっとり", "#ホッとする", "#まったり", "#包まれる"],
+      image: "softlight",
       meaning: "窓辺の木漏れ日や薄曇りの自然光。強い明暗を作らないおだやかな光線が、静かで優しく包み込むような空気感を作り出す。",
       episodes: [
         {
@@ -384,6 +385,7 @@ const STAGE1_DATA = {
       emotions: ["intellectual", "immersed"],
       summary: "煙のように溶け込み、想像力を試す影",
       tags: ["#うっとり", "#なるほど！", "#モヤモヤ"],
+      image: "sfumato",
       meaning: "輪郭線をくっきり描かず、煙のように静かに境界を溶かす技法。あえて曖昧にすることで脳が深く観察し想像で補おうとするため、深い没入感と知的な味わいが生まれる。"
     },
     {
