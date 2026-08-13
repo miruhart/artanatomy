@@ -427,6 +427,7 @@ const STAGE1_DATA = {
       emotions: ["relaxed", "immersed"],
       summary: "画面を支える真っ直ぐな安定感",
       tags: ["#ホッとする", "#すっきり", "#広々", "#包まれる"],
+      image: "horizon",
       meaning: "真っ直ぐな水平線は、画面に揺るぎない安定感と開放的な世界の広がりを感じさせる骨組みとなる。",
       episodes: [
         {
@@ -442,6 +443,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "intellectual"],
       summary: "真ん中にすえて逃がさない主役",
       tags: ["#ハッとする", "#圧倒される", "#なるほど！"],
+      image: "center",
       meaning: "画面の真ん中に主役をドカンと配置する構図。他の要素に目移りさせず視線をロックし、逃げ場のない圧倒的な存在感を主張する。",
       episodes: [
         {
@@ -464,6 +466,7 @@ const STAGE1_DATA = {
       emotions: ["excite"],
       summary: "画面を切り裂くスピードと勢い",
       tags: ["#ドキドキ", "#スカッとする", "#ハッとする"],
+      image: "diagonal",
       meaning: "斜めのラインを効果的に走らせることで、水平や垂直にはないスピード感と強い勢いを画面に与えるテクニック。"
     },
     {
@@ -515,6 +518,7 @@ const STAGE1_DATA = {
       emotions: ["unease"],
       summary: "バランスを破って生まれる動き",
       tags: ["#ざわざわ", "#ハッとする", "#落ち着かない"],
+      image: "asymmetry",
       meaning: "左右や上下のバランスをあえて崩す配置。安定を破ることで、画面に動的な揺らぎや予期せぬ緊張感を呼び起こす手法。",
       episodes: [
         {
@@ -537,6 +541,7 @@ const STAGE1_DATA = {
       emotions: ["excite", "unease"],
       summary: "画面をごった返させる圧倒的熱量",
       tags: ["#そわそわする", "#テンションが上がる", "#圧倒される"],
+      image: "crowd",
       meaning: "多くの人物を画面いっぱいにひしめき合わせる配置。視線を迷わせ、群衆が持つ圧倒的な熱気や混乱を表現する。",
       episodes: [
         {
@@ -577,6 +582,7 @@ const STAGE1_DATA = {
       key: "languid", name: "脱力", icon: "bed", cat: "mirror",
       emotions: ["relaxed"],
       summary: "緊張が解けてダラリとした重さ",
+      image: "languid";
       tags: ["#まったり", "#ホッとする", "#スカッとする"],
       meaning: "だらりと力を抜いたポーズや、重力に身を任せた身体。全身の緊張がほぐれきった無防備な姿が、こちらにまで深いリラックス感を伝染させる。"
     },
