@@ -582,7 +582,7 @@ const STAGE1_DATA = {
       key: "languid", name: "脱力", icon: "bed", cat: "mirror",
       emotions: ["relaxed"],
       summary: "緊張が解けてダラリとした重さ",
-      image: "languid";
+      image: "languid",
       tags: ["#まったり", "#ホッとする", "#スカッとする"],
       meaning: "だらりと力を抜いたポーズや、重力に身を任せた身体。全身の緊張がほぐれきった無防備な姿が、こちらにまで深いリラックス感を伝染させる。"
     },
