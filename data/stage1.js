@@ -652,6 +652,7 @@ const STAGE1_DATA = {
       emotions: ["unease", "intellectual"],
       summary: "現実からずらして脳を惑わす形",
       tags: ["#ざわざわ", "#モヤモヤ", "#なるほど！"],
+      image: "deform",
       meaning: "人体や空間の比率を現実からあえて歪める表現。見慣れた形との落差が心地よい違和感を生み、表現の意図を考察させられる。",
       episodes: [
         {
@@ -667,6 +668,7 @@ const STAGE1_DATA = {
       emotions: ["unease", "intellectual"],
       summary: "果てしない連続が誘う無限への道",
       tags: ["#ざわざわ", "#落ち着かない", "#クラクラする"],
+      image: "grid",
       meaning: "同じ形やパターンが果てしなく繰り返される仕掛け。境界線がふと曖昧になり、まるで広大な宇宙へと無限に吸い込まれていくような没入感を生み出す。",
       episodes: [
         {
@@ -682,6 +684,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "intellectual"],
       summary: "止まった絵にひそむ激しい予感",
       tags: ["#息を呑む", "#ゾクゾク", "#ハッとする"],
+      image: "stillmotion",
       meaning: "止まった画面の中で、なびく衣服や滴る水滴が次の瞬間の動きを予感させる。静けさと激しさの対比が鮮烈な印象を残す。"
     },
     {
@@ -689,6 +692,7 @@ const STAGE1_DATA = {
       emotions: ["relaxed"],
       summary: "重力を忘れさせるふわふわ感",
       tags: ["#開放感", "#軽やか", "#スカッとする"],
+      image: "float",
       meaning: "重い塗料で描かれているのに、空中に浮いているように見える錯覚。現実の重力ルールを忘れさせ、身体を軽く解放する。",
       episodes: [
         {
@@ -704,6 +708,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "unease"],
       summary: "崩れた形が教えてくれる滅びの美",
       tags: ["#息を呑む", "#引き込まれる", "#しんみり"],
+      image: "ruins",
       meaning: "栄えた建物が崩れ去った姿は、寂しさと壮大さという真逆の感情を起こさせる。時間の儚さがあるからこそ美しく惹きつけられる。",
       episodes: [
         {
@@ -719,6 +724,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "excite"],
       summary: "あふれ出す生々しい命の気配",
       tags: ["#ドキドキ", "#血が騒ぐ", "#圧倒される"],
+      image: "lifeanddeath",
       meaning: "ただの絵の具やキャンバスのはずなのに、まるで今ここで呼吸をしているかのように生々しく脈打つ。物質の枠を超え、命の気配がせり出してくる躍動感。",
       episodes: [
         {
