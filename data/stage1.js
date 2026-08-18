@@ -151,6 +151,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "unease"],
       swatch: "#1a1a1a",
       summary: "未知の恐怖と画面を締める闇",
+      image: "black",
       tags: ["#圧倒される", "#ヒヤッとする", "#ゾクゾク"],
       meaning: "すべての光を吸収する黒は、絶望や未知への恐怖を象徴する色。隣り合う他の色を引き立て、画面の輪郭を強く引き締める。"
     },
@@ -159,6 +160,7 @@ const STAGE1_DATA = {
       emotions: ["immersed", "relaxed"],
       swatch: "#ffffff",
       summary: "神聖さと無限の空白",
+      image: "white",
       tags: ["#ホッとする", "#心が洗われる", "#すっきり", "#静まる"],
       meaning: "汚れのない白は、神聖さや純粋さ、無限の空白を感じさせる色。周囲の色を引き立てるベースとなり、静寂の緊張感も生み出す。",
       episodes: [
@@ -175,6 +177,7 @@ const STAGE1_DATA = {
       emotions: ["excite"],
       swatch: "#ff8a3d",
       summary: "人肌の温もりと太陽の活気",
+      image: "orange",
       tags: ["#ワクワク", "#ほっこり", "#テンションが上がる"],
       meaning: "赤の熱量と黄色の明るさをあわせ持ったオレンジは、夕焼けのように心を温める。人肌の温もりや活気あふれる陽気さを与える。"
     },
@@ -182,6 +185,7 @@ const STAGE1_DATA = {
       key: "purple", name: "紫", icon: "eye", cat: "color",
       emotions: ["unease"],
       swatch: "#8b5fbf",
+      image: "purple",
       summary: "熱と冷たさが同居する妖しさ",
       tags: ["#ざわざわ", "#モヤモヤ", "#ミステリアス"],
       meaning: "情熱の赤と静寂の青が混ざり合うミステリアスな色。相反する感情が同居するため、観る者の心に妖しい揺らぎやもやもやを生み出す。"
@@ -191,6 +195,7 @@ const STAGE1_DATA = {
       emotions: ["awe"],
       swatch: "linear-gradient(135deg,#f6e27a,#c9a227)",
       summary: "現実を消し去る非現実の光",
+      image: "gold",
       tags: ["#息を呑む", "#圧倒される", "#吸い込まれそう"],
       meaning: "光を弾く金の背景は現実の距離感を失わせる。影のない平面の輝きが見る者を吸い込み、異次元の神聖な世界へと誘う。",
       episodes: [
@@ -207,6 +212,7 @@ const STAGE1_DATA = {
       emotions: ["relaxed", "intellectual"],
       swatch: "linear-gradient(135deg,#f2f2f2,#a8a8a8)",
       summary: "冴えわたる知性と冷たい気品",
+      image: "silver",
       tags: ["#凛とする", "#すっきり", "#静まる"],
       meaning: "派手な自己主張を抑えた金属的な輝きを持つ色。血の通った温もりを削ぎ落とし、静寂の中で冴え渡る知性と緊張感をもたらす。"
     },
@@ -224,6 +230,7 @@ const STAGE1_DATA = {
       emotions: ["intellectual"],
       swatch: "linear-gradient(90deg, #e5484d, #4caf6a)",
       summary: "反対の色が引き立てあう魔法",
+      image: "complementary",
       tags: ["#ハッとする", "#ピタッとはまる", "#なるほど！"],
       meaning: "赤と緑、青とオレンジなど反対側の色を隣り合わせる技法。お互いの色を限界まで鮮やかに際立たせ、視覚的なアハ体験を生む。",
       episodes: [
@@ -240,6 +247,7 @@ const STAGE1_DATA = {
       emotions: ["immersed", "relaxed"],
       swatch: "linear-gradient(180deg, #ff8a3d, #8b5fbf)",
       summary: "運命を暗示するグラデーション",
+      image: "gradation",
       tags: ["#うっとり", "#引き込まれる", "#しんみり"],
       meaning: "刻一刻と変化する空のグラデーションは、作品全体の空気感や登場人物の運命を暗示し、画面のムードを一気に決める。",
       episodes: [
