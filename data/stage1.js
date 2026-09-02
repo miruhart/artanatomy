@@ -295,6 +295,7 @@ const STAGE1_DATA = {
       key: "darkness", name: "暗闇", icon: "moon", cat: "light",
       emotions: ["awe", "unease"],
       summary: "想像力をかきたてる劇的な闇",
+      image: "darkness",
       tags: ["#ヒヤッとする", "#ざわざわ", "#息を呑む"],
       meaning: "画面の大半を暗闇で覆い、視線を照らされた一角へ集中させる。見えない部分を鑑賞者の想像力で補わせるドラマチックな手法。",
       episodes: [
@@ -310,6 +311,7 @@ const STAGE1_DATA = {
       key: "sacredlight", name: "聖なる光", icon: "sun", cat: "light",
       emotions: ["awe", "immersed"],
       summary: "天から降り注ぐ奇跡の輝き",
+      image: "sacredlight",
       tags: ["#息を呑む", "#ゾクゾク", "#鳥肌が立つ"],
       meaning: "上空から差し込む一筋の眩しい光は、人知を超えた神聖さや奇跡を予感させる。光を浴びる人物が特別な存在であることを物語る。",
       episodes: [
@@ -332,6 +334,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "unease"],
       summary: "顔を影にしてドラマを語る輪郭",
       tags: ["#ハッとする", "#ミステリアス", "#ざわざわ"],
+      image: "backlight",
       meaning: "被写体の後ろから光を当てることで顔を影にし、美しい輪郭を浮かび上がらせる。表情を隠すことで内面の感情を想像させる。"
     },
     {
@@ -356,6 +359,7 @@ const STAGE1_DATA = {
       key: "flat", name: "平塗り", icon: "border-none", cat: "texture",
       emotions: ["intellectual"],
       summary: "筆跡を消したクリアな色の面",
+      image: "flat",
       tags: ["#スッキリ", "#ピタッとはまる", "#凛とする"],
       meaning: "筆跡や立体感を極限まで消し去った平らな色面。グラデーションに頼らず、形や境界線のクリアな構造美を強調する。"
     },
@@ -363,6 +367,7 @@ const STAGE1_DATA = {
       key: "brushstroke", name: "筆跡", icon: "paintbrush", cat: "texture",
       emotions: ["excite"],
       summary: "画家の熱量と動きを刻む痕跡",
+      image: "brushstroke",
       tags: ["#血が騒ぐ", "#ワクワク", "#テンションが上がる"],
       meaning: "筆を走らせた勢いや痕跡をあえて残す表現。画面の表面から画家の手の動きや一瞬の熱量をそのままダイレクトに体感できる。",
       episodes: [
@@ -402,6 +407,7 @@ const STAGE1_DATA = {
       key: "hyperdetail", name: "点と集積", icon: "eye", cat: "texture",
       emotions: ["awe", "intellectual"],
       summary: "小さなつぶつぶが集まって生まれる輝き",
+      image: "hyperdetail",
       tags: ["#息を呑む", "#アハ体験", "#なるほど！"],
       meaning: "ひとつひとつの小さな点や粒子を並べ、密に集める表現。近くで見ると単なるつぶつぶなのに、離れて見ると脳内で色が統合され、圧倒的なスケールや光として結像する。",
       episodes: [
@@ -417,6 +423,7 @@ const STAGE1_DATA = {
       key: "splatter", name: "飛沫", icon: "paint-roller", cat: "texture",
       emotions: ["excite"],
       summary: "跳ねる絵の具と身体のエネルギー",
+      image: "splatter",
       tags: ["#ドキドキ", "#血が騒ぐ", "#ハッとする"],
       meaning: "絵の具を叩きつけたり散らしたりする激しいタッチ。画家の全身の運動がそのまま刻まれ、見る者の心を揺さぶるエネルギーを放つ。",
       episodes: [
@@ -465,6 +472,7 @@ const STAGE1_DATA = {
     {
       key: "triangle", name: "三角形", icon: "shapes", cat: "composition",
       emotions: ["intellectual"],
+      image: "triangle",
       summary: "永久の秩序をつくるどっしり感",
       tags: ["#ホッとする", "#ピタッとはまる", "#すっきり"],
       meaning: "画面の中に三角形の配置を作ることで、どっしりとした心理的安定感を与える。崩れることのない永久の秩序を表現する基本構図。"
