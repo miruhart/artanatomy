@@ -764,6 +764,7 @@ const STAGE1_DATA = {
       emotions: ["awe", "unease"],
       summary: "完璧な美しさの裏に潜むおそろしさ",
       tags: ["#ゾクゾク", "#ヒヤッとする", "#ざわざわ"],
+      image: "beautyfear",
       meaning: "美しく完璧な絵の中に、おそろしい事件や悲劇が潜む描写。美と恐怖の激しい落差が脳に強い刺激と不可解な緊張を与える。",
       episodes: [
         {
