@@ -497,6 +497,7 @@ const STAGE1_DATA = {
       key: "onepoint", name: "一点透視", icon: "vector-square", cat: "composition",
       emotions: ["relaxed", "intellectual"],
       summary: "奥へ奥へと視線をすいこむ直線",
+      image: "onepoint",
       tags: ["#引き込まれる", "#スカッとする", "#なるほど！"],
       meaning: "すべての直線が遠くのひとつの点へ向かって集まる構図。視線を奥へと強力に引き込み、構造的な快感と空間の臨場感を作る。",
       episodes: [
@@ -512,6 +513,7 @@ const STAGE1_DATA = {
       key: "depth", name: "奥行き", icon: "layer-group", cat: "composition",
       emotions: ["immersed", "awe"],
       summary: "絵の中に現れる果てしない大空間",
+      image: "depth",
       tags: ["#引き込まれる", "#広々", "#圧倒される"],
       meaning: "色彩のかすみや大小関係を利用して、平面のキャンバス上に無限に広がる奥深い大空間を作り出す技法。",
       episodes: [
@@ -549,6 +551,7 @@ const STAGE1_DATA = {
       key: "framing", name: "枠取り", icon: "crop", cat: "composition",
       emotions: ["intellectual", "immersed"],
       summary: "陰からのぞき見させる没入感",
+      image: "framing",
       tags: ["#引き込まれる", "#のぞき見", "#なるほど！"],
       meaning: "柱や窓枠などで主役を囲み込む構図。まるで陰からのぞき見をしているような没入感を与えつつ、視線の焦点を限定させる。"
     },
@@ -606,6 +609,7 @@ const STAGE1_DATA = {
       key: "embrace", name: "抱擁", icon: "hands-holding-child", cat: "mirror",
       emotions: ["immersed"],
       summary: "強い愛と逃げられない束縛のポーズ",
+      image: "embrace",
       tags: ["#うっとり", "#包まれる", "#引き込まれる"],
       meaning: "人を強く抱きしめるポーズは、あふれる愛情の深さと人肌の温もりをダイレクトに伝える。こちらまで優しく包み込まれるような安心感を生む。",
       episodes: [
@@ -621,6 +625,7 @@ const STAGE1_DATA = {
       key: "gaze", name: "視線", icon: "eye", cat: "mirror",
       emotions: ["unease", "intellectual"],
       summary: "思わず目線をたどってしまう誘惑",
+      image: "gaze",
       tags: ["#ざわざわ", "#ハッとする", "#落ち着かない"],
       meaning: "描かれた人々が向ける目線につられて、無意識にその先を追ってしまう。あるいは、画面の中からじっと見つめ返されることで、目を逸らせない緊張感が生まれる。"
     },
@@ -628,6 +633,7 @@ const STAGE1_DATA = {
       key: "facingaway", name: "背中", icon: "user-slash", cat: "mirror",
       emotions: ["immersed", "unease"],
       summary: "絵の世界へ引き込む後ろ姿",
+      image: "facingaway",
       tags: ["#引き込まれる", "#うっとり", "#しんみり"],
       meaning: "鑑賞者に背を向けた人物は、私たちの身代わり。同じ景色を肩越しに見つめることで、一気に絵の世界へとこちらの意識が引き込まれていく。"
     },
@@ -635,6 +641,7 @@ const STAGE1_DATA = {
       key: "pain", name: "痛み", icon: "heart-crack", cat: "mirror",
       emotions: ["unease"],
       summary: "わが身にうつる強烈な錯覚",
+      image: "pain",
       tags: ["#ヒヤッとする", "#ざわざわ", "#ゾクゾク"],
       meaning: "傷ついた身体や苦痛に歪む顔を見ると、こちらの胸の奥までヒヤリと痛む。他人の痛みをまるで自分のことのように錯覚してしまう、強烈な身体的共感。",
       episodes: [
@@ -650,6 +657,7 @@ const STAGE1_DATA = {
       key: "silence", name: "沈黙", icon: "comment-slash", cat: "mirror",
       emotions: ["immersed", "unease"],
       summary: "会話のない部屋に漂う重い空気",
+      image: "silence",
       tags: ["#モヤモヤ", "#ヒヤッとする", "#落ち着かない"],
       meaning: "同じ空間にいるのに視線が噛み合わない人々。言葉のない冷たい空気や、身体の距離感が物語る重たい関係性が、見る者を静かに居心地悪くさせる。",
       episodes: [
