@@ -20,7 +20,7 @@
   <style>
     :root {
       --line: #1a1a1a;
-      --sub: #393835;
+      --sub: #2c2c2c;
       --brown: #6b6455;
       --white: #FFFFFF;
       --cream: #fbf6ed;
@@ -61,7 +61,7 @@
 
     .page {
       position: relative;
-      padding: 1rem 1rem 6rem;
+      padding: 1rem;
       width: 100%;
       max-width: var(--max-width);
       overflow: hidden;
@@ -104,7 +104,7 @@
       font-weight: 900;
       line-height: 1.4;
       letter-spacing: 0.01em;
-      margin-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
@@ -121,7 +121,7 @@
       font-weight: 600;
       margin-bottom: 1rem;
       color: var(--line);
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
     }
 
     .pop {
@@ -189,7 +189,6 @@
       font-weight: 900;
       line-height: 1.45;
       letter-spacing: 0.01em;
-      margin-bottom: 1.4rem;
     }
 
     .hero h1 .hl {
@@ -331,8 +330,28 @@
       text-align: left;
     }
 
-    .ep-card:nth-child(2n) .eyebrow {
+    .ep-card:nth-child(4n + 2) {
+      background: var(--blue);
+    }
+
+    .ep-card:nth-child(4n + 2) .eyebrow {
       background: var(--green);
+    }
+
+    .ep-card:nth-child(4n + 3) {
+      background: var(--green);
+    }
+
+    .ep-card:nth-child(4n + 3) .eyebrow {
+      background: var(--pink);
+    }
+
+    .ep-card:nth-child(4n) {
+      background: var(--pink);
+    }
+
+    .ep-card:nth-child(4n) .eyebrow {
+      background: var(--mustard);
     }
 
     .ep-card-title {
@@ -367,49 +386,6 @@
     }
 
     /* ---- 詳細ページの長文解説スタイル ---- */
-    .detail-article-image {
-      position: relative;
-      width: calc(100vw + 2rem);
-      height: 100vw;
-      max-width: 32rem;
-      max-height: 32rem;
-      border-radius: 100% 100% 0 0;
-      overflow: hidden;
-      object-fit: cover;
-      margin-bottom: -1rem;
-      z-index: -1;
-      left: 50%;
-      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-
-      /* ▼ 最初は透明にして表示を待つ */
-      opacity: 0;
-    }
-
-    /* ▼ 画像のロードが完了したらアニメーション発火 */
-    .detail-article-image.is-loaded {
-      animation: fadeInUp 1.2s ease-out forwards;
-    }
-
-    @media (min-width: 32rem) {
-      .detail-article-image {
-        max-width: 100%;
-      }
-    }
-
-    /* 下から少し持ち上がりながら透過解除 */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translate(-50%, 10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-      }
-    }
-
     .detail-article-card {
       background: var(--white);
       border: var(--border);
@@ -424,9 +400,9 @@
       font-size: 1rem;
       line-height: 1.75;
       font-weight: 600;
-      color: var(--line);
+      color: var(--sub);
       margin-bottom: 1rem;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
     }
 
     .detail-article-body p:last-child {
@@ -495,7 +471,7 @@
       font-size: 1rem;
       font-weight: 700;
       line-height: 1.2;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.08em;
     }
 
     /* ---- 感情タグチップ ---- */
@@ -505,17 +481,16 @@
       gap: 0.3rem;
       width: 100%;
       margin-top: 0.1rem;
-      justify-content: flex-start;
     }
 
     .tag-pill {
       font-size: 0.7rem;
       font-weight: 700;
-      color: var(--line);
-      background: var(--white);
-      border: 2px solid var(--line);
+      color: #555;
+      background: var(--cream);
+      border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 0.2rem 0.6rem;
+      padding: 0.2rem 0.4rem;
       letter-spacing: -0.04em;
       line-height: 1.2;
       white-space: nowrap;
@@ -523,7 +498,11 @@
 
     .tag-pill-lg {
       font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--line);
       letter-spacing: 0.04em;
+      background: var(--white);
+      border: 2px solid var(--line);
       border-radius: 999px;
       padding: 0.5rem 0.75rem;
     }
@@ -630,8 +609,7 @@
     <div id="topbar"></div>
     <div id="view"></div>
     <footer class="footer">
-      <a href="https://miruhart.github.io/links/" target="_blank"><img class="logo" src="assets/logo-black.png"
-          alt="miruha"></a>
+      <img class="logo" src="assets/logo-black.png" alt="miruha">
       <p>アートは知ると、おもしろい。</p>
     </footer>
   </div>
@@ -641,7 +619,7 @@
       aria-label="LINE友だち追加">
       <i class="fa-brands fa-line"></i>公式LINE
     </a>
-    <a class="float-btn float-ig" href="https://www.instagram.com/miruha_art/" target="_blank" rel="noopener"
+    <a class="float-btn float-ig" href="https://www.instagram.com/miruha.art/" target="_blank" rel="noopener"
       aria-label="Instagramをフォロー">
       <i class="fa-brands fa-instagram"></i>Instagram
     </a>
@@ -656,7 +634,7 @@
     const LIFF_ID = "YOUR_LIFF_ID_HERE";
     // const LIFF_ID = "2011044763-E60QgPYS";
     const OFFICIAL_ACCOUNT_URL = "https://lin.ee/sMso5Lw";
-    const INSTAGRAM_URL = "https://www.instagram.com/miruha.art";
+    const INSTAGRAM_URL = "https://www.instagram.com/miruha.art/";
     const CATEGORIES = STAGE1_DATA.categories;
     const SUBS = STAGE1_DATA.subs;
     const EMOTIONS = STAGE1_DATA.emotions;
@@ -666,46 +644,44 @@
     // 各オノマトペ・感情ワードごとの個別解説データ
     const WORD_DESCRIPTIONS = {
       // 没入・安心
-      "うっとり": "画面全体に広がる美しい色や、やわらかな光のぼかしを見つめているうちに、時間や現実を忘れて心が心地よく満たされていく感覚。",
-      "ほっこり": "温かみのある色合いや、人の優しさが伝わる手のポーズなどを見て、胸の奥がじんわりと温かくなるような安心感。",
-      "吸い込まれそう": "一点透視図法による強い奥行きや、どこまでも深い青や金色の空間に、自分の身体ごと引っ張られていくような感覚。",
-      "心が洗われる": "雲の隙間から射す光の柱や、一切の無駄を省いた白の世界を前にして、頭の中の雑念がスーッと消えて澄み渡る感覚。",
-      "ホッとする": "安定感のある三角形の構図や、静かな光に包まれた光景を見て、身体の緊張がふっとほぐれる感覚。",
-      "力がぬける": "輪郭線のないなめらかな陰影や、かすれた質感の筆跡を見つめることで、肩の力がすーっと抜けていくリラックス感。",
+      "うっとり": "画面いっぱいに広がる優しい色や柔らかな光を見つめているうちに、日常の悩みや時間の感覚をすっかり忘れ、心が心地よく満たされていく感覚。",
+      "ほっこり": "温かみのある色合いや、寄り添う人の優しさが伝わるポーズを見て、緊張していた心が解きほぐされ、胸の奥がじんわり温かくなる安心感。",
+      "吸い込まれそう": "果てしない奥行きや、どこまでも深い青や金の空間を見つめていると、磁石に引き寄せられるように自分の身体ごと絵の中に引き込まれる感覚。",
+      "心が洗われる": "雲のすき間から差し込む光や、一切の無駄がない真っ白な世界を前にして、頭の中のごたごたや雑念がスーッと消えて澄み渡る感覚。",
+      "ホッとする": "どっしり安定した構図や静かな光に包まれた風景を見て、無意識に力が入っていた肩や身体の緊張が、ふっとほぐれていく感覚。",
+      "力がぬける": "境目のないなめらかな影や、優しくかすれた筆の跡を目で追うことで、張っていた気持ちが緩み、身体の力がすーっと抜けていくリラックス感。",
 
       // 畏敬・圧倒
-      "ぞわぞわ": "生々しく盛り上がった絵の具の質感や、ねじれた身体の描写を見て、皮膚の表面がザラザラと逆立つような触覚的な反応。",
-      "ゾクゾク": "圧倒的なスケールの奥行きや、暗闇から照らし出される強い光と影に息を呑み、ゾクッとするような鳥肌が立つ感覚。",
-      "息を呑む": "細部まで完璧に描き込まれた細密画や、一瞬の静寂を捉えた絵を前にして、思わず息を止めて見入ってしまう感覚。",
-      "鳥肌が立つ": "激しい絵の具の飛沫や、圧倒的なコントラストの劇的な光景に触れて、全身の細胞がゾクッと粟立つ感覚。",
-      "圧倒される": "画面いっぱいに描かれた大勢の人々の熱気や、金箔が放つ眩い光に圧せられ、言葉を失ってしまう感覚。",
-      "めまいがする": "多視点の歪んだ空間や、幾度も繰り返されるパターンを見続けることで、空間の平衡感覚がぐらりと揺らぐ感覚。",
+      "ぞわぞわ": "ボコボコと生々しく盛り上がった絵の具や、歪んだ身体の描写を目にしたとき、まるで肌を直接触られたかのように皮膚の表面がザラザラ浮き立つ感覚。",
+      "ゾクゾク": "圧倒されるほど深い暗闇や、そこに強く差し込む光と影のギャップに思わず息を呑み、背筋にぞくっと鳥肌が立ちあがるような衝撃。",
+      "息を呑む": "写真と見紛うほど細かく描き込まれた世界や、一瞬の静寂を切り取った画面を前にして、思わず呼吸するのも忘れてじっと見入ってしまう感覚。",
+      "鳥肌が立つ": "飛び散る絵の具の激しい勢いや、ドラマチックな光と影に触れた瞬間、全身の細胞が一斉に目覚めてぞわっと鳥肌が立つ感覚。",
+      "圧倒される": "画面を埋め尽くす群衆の熱気や、豪華な金箔が放つ眩い光の束に圧せられて、思わず言葉を失い立ちすくんでしまうような強烈なパワー。",
+      "めまいがする": "あべこべに歪んだ不思議な部屋や、無限に繰り返されるパターンをじっと追いかけるうちに、どこに立っているのか感覚がバグるような感覚。",
 
       // 興奮・活力
-      "ドキドキ": "強烈な赤や激しい対角線の動き、夜の暗闇に浮かぶ光を見て、本能的に心拍数が跳ね上がるような緊張と高揚感。",
-      "ワクワク": "明るい黄色やオレンジ、躍動感のある飛び散る線を見て、これから何かが始まるような期待感で心が躍る感覚。",
-      "ハッとする": "漆黒の中に差し込むスポットライトや鮮烈な色彩の対比に、一瞬で視線を奪われ意識が覚醒する感覚。",
-      "血が騒ぐ": "画家の全身運動が残る激しい筆跡や、押し寄せる群衆のエネルギーに当てられて、身体の奥から熱い感情が湧き上がる感覚。",
-      "テンションが上がる": "ポスターのように強いコントラストやポップな色彩の組み合わせを見て、脳がダイレクトに刺激される感覚。",
-      "そわそわする": "不穏な雲が広がる空や、あえて傾けられた対角線の構図によって、心が落ち着かず胸がざわつく感覚。",
+      "ドキドキ": "パッと目を引く真っ赤な色や、激しく斜めに走るライン、暗闇の光を見て、頭で考えるより先に本能で心拍数が跳ね上がるような高揚感。",
+      "ワクワク": "太陽のような黄色やオレンジ、元気に飛び散る絵の具の跡を見て、「これから一体なにが始まるんだろう！」と胸が躍り出すような期待感。",
+      "ハッとする": "真っ暗闇の中に突然ピカッと差し込む光や、正反対の色同士の激しい対比に、一瞬で視線を奪われてパッと目が覚める感覚。",
+      "血が騒ぐ": "画家の全身の運動がそのまま残る激しい筆跡や、押し寄せる群衆の熱気に当てられて、自分の身体の奥から熱いエネルギーが湧き出る感覚。",
+      "テンションが上がる": "ポスターのようにくっきりしたコントラストや、ポップで鮮やかな色彩の組み合わせを目にして、脳がダイレクトに刺激される興奮。",
+      "そわそわする": "あやしい雲が広がる空や、あえて傾けられたグラグラする構図によって、これから事件が起きそうな予感がして心が落ち着かなくなる感覚。",
 
       // 違和感・不安
-      "ざわざわ": "不気味な緑の影や、背中を向けた人物の沈黙から、言葉にできない不穏な気配や予感を感じ取って落ち着かなくなる感覚。",
-      "ヒヤッとする": "すべてを呑み込む黒や、美しさと悲劇が隣り合わせの画面を見て、背筋に冷たい風が走るような恐怖感。",
-      "もやもや": "視点が定まらない空間や、かすれた色調の重なりに触れて、頭の中で答えが出ず思考が漂う感覚。",
-      "ソワソワ": "画面全体を埋め尽くす幾何学模様の反復や、荒れた空の気配に引っ張られ、胸の奥が落ち着かない感覚。",
-      "落ち着かない": "画面上の物が歪んでいたり、ビビッドな原色がせめぎ合っていることで、視線の置き場に困りソワソワする感覚。",
-      "こわいのに見たい": "恐ろしい事件や崩壊した廃墟の中に潜む、息を呑むほどの美しさに引き寄せられ、目が離せなくなる感覚。",
+      "ざわざわ": "不気味に光る緑の影や、背中を向けた人物の冷たい沈黙から、「何かおかしいぞ」と不穏な気配を感じ取って胸が落ち着かなくなる感覚。",
+      "ヒヤッとする": "すべてを呑み込む真っ黒な闇や、美しい絵の奥に隠されたおそろしい悲劇に気づいた瞬間、背筋にヒヤッと冷たい風が走るような恐怖感。",
+      "もやもや": "どこが奥でどこが手前かわからない不思議な空間や、曖昧に溶けた色合いを見て、頭の中で答えが出ず考え込んでしまう感覚。",
+      "ソワソワ": "画面全体を隙間なく埋め尽くす模様の繰り返しや、嵐の直前のような空の気配に引っぱられ、胸の奥がざわついて落ち着かない感覚。",
+      "落ち着かない": "描かれている物が現実と違って歪んでいたり、激しい原色同士がぶつかり合っていることで、どこに目を置けばいいか迷ってしまう感覚。",
+      "こわいのに見たい": "恐ろしい悲劇や崩れかけた廃墟なのに、なぜか息をのむほど美しい。そんな「怖さ」と「美しさ」のギャップに引き寄せられ目が離せない感覚。",
 
       // 知的快感
-      "スッキリ": "幾何学的に計算されたまっすぐな線や、吸い込まれるような一点透視の空間を見て、乱れた心が整う感覚。",
-      "なるほど！": "視線を誘導する構図の計算や、画面に散りばめられた画家のトリックに気づき、頭の中のパズルが解ける快感。",
-      "アハ体験": "歪んだ視点や人物の視線の先に隠された意味を発見した瞬間、世界がガラリと違って見えてくる閃き。",
-      "頭がさえる": "完璧なシンメトリーや整然と並ぶ四角形を見て、思考のノイズが消えて頭の中がクリアになる感覚。",
-      "つながった感じ": "描かれた手と手のポーズや交錯する視線を通して、人と人、あるいは画面と自分との間に深い絆を感じる感覚。"
+      "スッキリ": "数学のように計算されたまっすぐな線や、吸い込まれる一点透視の空間を見ることで、ごちゃごちゃしていた心がスッと整う快感。",
+      "なるほど！": "「あ、ここに視線を誘導する仕掛けがあるんだ！」と画家の仕掛けた罠や計算に気づいた瞬間、頭の中のパズルがカチッとはまる快感。",
+      "アハ体験": "一見変に見える歪んだポーズや視線の先に隠された意味を発見した瞬間、絵の見え方がガラリと変わって世界が違って見える閃き。",
+      "頭がさえる": "ピタッと左右対称に整った構図や、きっちり並ぶ四角形を見ることで、余計な雑念が消え去り、頭の中がクリアに冴えわたる感覚。",
+      "つながった感じ": "描かれた人物の手のポーズや重なり合う視線を通して、絵の中のドラマだけでなく、絵を描いた画家や自分自身とも固くつながった感覚。"
     };
-
-
 
     const topbarEl = document.getElementById("topbar");
     const viewEl = document.getElementById("view");
@@ -731,24 +707,23 @@
     function renderHome() {
       topbarEl.innerHTML = "";
       let html = `
-    <section class="hero pop">
-      <a href="https://miruhart.github.io/links/" target="_blank"><img class="logo" src="assets/logo-black.png"
-          alt="miruha"></a>
-      <h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
-    </section>
-  `;
+<section class="hero pop">
+<img class="logo" src="assets/logo-black.png" alt="miruha">
+<h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
+</section>
+`;
 
       STAGES.forEach((stage, i) => {
         html += `<section class="section center pop ${stage.active ? "stage-active" : "stage-locked"}" style="animation-delay:${i * 60}ms">
-      <div class="eyebrow">${stage.active ? `<i class=\"fa-solid fa-lock-open\"></i> STAGE ${stage.num}` : `<i class=\"fa-solid fa-lock\"></i> STAGE ${stage.num}`}</div>
-      <h2>${stage.title}</h2>
-      <p class="lead" style="font-size:0.9rem;">${stage.goal}</p>
-      ${stage.active ? `
-        <div class="badge-grid" id="cat-grid"></div>
-        <p class="mode-hint" style="margin-top:1.3rem">うまく言葉にならないときは</p>
-        <div class="list-col" id="wordrow-${stage.num}"></div>
-      ` : ""}
-    </section>`;
+<div class="eyebrow">${stage.active ? `<i class=\"fa-solid fa-lock-open\"></i> STAGE ${stage.num}` : `<i class=\"fa-solid fa-lock\"></i> STAGE ${stage.num}`}</div>
+<h2>${stage.title}</h2>
+<p class="lead" style="font-size:0.9rem;">${stage.goal}</p>
+${stage.active ? `
+<div class="badge-grid" id="cat-grid"></div>
+<p class="mode-hint" style="margin-top:1.3rem">うまく言葉にならないときは</p>
+<div class="list-col" id="wordrow-${stage.num}"></div>
+` : ""}
+</section>`;
       });
 
       viewEl.innerHTML = html;
@@ -777,27 +752,27 @@
 
     function renderEmotionList() {
       topbarEl.innerHTML = `
-    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>
-  `;
+<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>
+`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const groups = EMOTIONS.map(em => {
         const badges = em.words.map(w => `<div class="badge-item word-badge" data-em="${em.key}" data-word="${w}"><span class="badge-label">${w}</span></div>`).join("");
         return `
-      <div class="genre-label">
-        <i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
-      <div class="badge-grid word-grid">${badges}</div>
-    `;
+<div class="genre-label">
+<i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
+<div class="badge-grid word-grid">${badges}</div>
+`;
       }).join("");
 
       viewEl.innerHTML = `
-    <section class="section slide" style="background:var(--white)">
-      <div class="eyebrow"><i class="fa-solid fa-heart"></i> 気持ち・感覚</div>
-      <h2>作品を前に、どう感じてる？</h2>
-      <p class="lead">その気持ちや感覚は、どんな視覚のしかけにつながっているのかな？</p>
-      ${groups}
-    </section>
-  `;
+<section class="section slide" style="background:var(--white)">
+<div class="eyebrow"><i class="fa-solid fa-heart"></i> 気持ち・感覚</div>
+<h2>作品を前に、どう感じてる？</h2>
+<p class="lead">その気持ちや感覚は、どんな視覚のしかけにつながっているのかな？</p>
+${groups}
+</section>
+`;
 
       viewEl.querySelectorAll("[data-em]").forEach(row => {
         row.addEventListener("click", () => goto({ view: "emotion", emotion: row.dataset.em, word: row.dataset.word }));
@@ -806,25 +781,25 @@
 
     function renderCategoryList() {
       topbarEl.innerHTML = `
-      <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 前に戻る</button>
-      <span class="crumb">Stage1 / 視覚のしかけから</span>
-    `;
+<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 戻る</button>
+<span class="crumb">Stage1 / 視覚のしかけから</span>
+`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const rows = CATEGORIES.map(cat => `
-      <div class="list-row" data-cat="${cat.key}">
-        <span><i class="fa-solid fa-${cat.icon}"></i></span><span class="row-title" style="flex:1">${cat.name}</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-      </div>
-    `).join("");
+<div class="list-row" data-cat="${cat.key}">
+<span><i class="fa-solid fa-${cat.icon}"></i></span><span class="row-title" style="flex:1">${cat.name}</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+</div>
+`).join("");
 
       viewEl.innerHTML = `
-      <section class="section no-border slide" style="background:var(--mustard)">
-        <div class="eyebrow"><i class="fa-solid fa-palette"></i> 視覚のしかけから探す</div>
-        <h2>気になる「しかけ」をえらんでください</h2>
-        <p class="lead">色・光・筆致など、6つの切り口があります。</p>
-        <div class="list-col">${rows}</div>
-      </section>
-    `;
+<section class="section no-border slide" style="background:var(--mustard)">
+<div class="eyebrow"><i class="fa-solid fa-palette"></i> 視覚のしかけから探す</div>
+<h2>気になる「しかけ」をえらんでください</h2>
+<p class="lead">色・光・筆致など、6つの切り口があります。</p>
+<div class="list-col">${rows}</div>
+</section>
+`;
 
       viewEl.querySelectorAll("[data-cat]").forEach(row => {
         row.addEventListener("click", () => goto({ view: "category", cat: row.dataset.cat }));
@@ -851,8 +826,8 @@
       }
 
       topbarEl.innerHTML = `
-    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 気持ち・感覚に戻る</button>
-  `;
+<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 気持ち・感覚に戻る</button>
+`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const subBadges = matchedSubs.map(s => {
@@ -862,26 +837,26 @@
           : `<span class="badge-icon" style="background:var(--white)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
         const tagsHtml = s.tags && s.tags.length ? `
-      <div class="tag-list">
-        ${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
-      </div>
-    ` : "";
+<div class="tag-list">
+${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
+</div>
+` : "";
 
         return `<div class="badge-item" data-sub="${s.key}" data-cat="${s.cat}">
-      ${inner}
-      <span class="badge-label">${s.name}</span>
-    </div>`;
+${inner}
+<span class="badge-label">${s.name}</span>
+</div>`;
       }).join("");
 
       viewEl.innerHTML = `
-    <section class="section slide">
-      <div class="eyebrow"><i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
-      <h2>「${heading}」</h2>
-      <p class="lead" style="margin-top:0.4rem;">${wordDescription}</p>
-      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem;"><i class="fa-solid fa-lightbulb"></i> こんな「しかけ」が関係しているかも</p>
-      <div class="badge-grid">${subBadges}</div>
-    </section>
-  `;
+<section class="section slide">
+<div class="eyebrow"><i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
+<h2>「${heading}」</h2>
+<p class="lead" style="margin-top:0.4rem;">${wordDescription}</p>
+<p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem; color:var(--line);"><i class="fa-solid fa-lightbulb"></i> こんな「しかけ」が関係しているかも</p>
+<div class="badge-grid">${subBadges}</div>
+</section>
+`;
 
       viewEl.querySelectorAll("[data-sub]").forEach(btn => {
         btn.addEventListener("click", () => goto({ view: "sub", sub: btn.dataset.sub, cat: btn.dataset.cat, emotion: emKey }));
@@ -895,7 +870,7 @@
       const gotCount = subs.filter(s => s.episodes && s.episodes.length).length;
 
       topbarEl.innerHTML = `
-    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>`;
+<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const badges = subs.map(s => {
@@ -904,26 +879,26 @@
           : `<span class="badge-icon" style="background:var(--white)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
         const tagsHtml = s.tags && s.tags.length ? `
-      <div class="tag-list">
-        ${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
-      </div>
-    ` : "";
+<div class="tag-list">
+${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
+</div>
+` : "";
 
         return `<div class="badge-item" data-sub="${s.key}">
-      ${inner}
-      <span class="badge-label">${s.name}</span>
-    </div>`;
+${inner}
+<span class="badge-label">${s.name}</span>
+</div>`;
       }).join("");
 
       viewEl.innerHTML = `
-    <section class="section slide">
-      <div class="eyebrow"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</div>
-      <h2>${cat.name}のしかけ</h2>
-      <p class="lead">${cat.meaning}</p>
-      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem;"><i class="fa-solid fa-lightbulb"></i> 例えば、こんな「${cat.name}のしかけ」があるよ</p>
-      <div class="badge-grid">${badges}</div>
-    </section>
-  `;
+<section class="section slide">
+<div class="eyebrow"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</div>
+<h2>${cat.name}のしかけ</h2>
+<p class="lead">${cat.meaning}</p>
+<p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem; color:var(--line);"><i class="fa-solid fa-lightbulb"></i> 例えば、こんな「${cat.name}のしかけ」があるよ</p>
+<div class="badge-grid">${badges}</div>
+</section>
+`;
 
       viewEl.querySelectorAll("[data-sub]").forEach(item => {
         item.addEventListener("click", () => goto({ view: "sub", sub: item.dataset.sub, cat: catKey, emotion: emotionKey }));
@@ -935,7 +910,7 @@
       const cat = CATEGORIES.find(c => c.key === (s.cat || catKey)) || { name: "", icon: "star" };
 
       topbarEl.innerHTML = `
-    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 前に戻る</button>`;
+<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> ${cat.name}に戻る</button>`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const bigIcon = s.swatch
@@ -943,102 +918,60 @@
         : `<span class="item-icon-big" style="background:var(--pink)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
       const tagsDetailHtml = s.tags && s.tags.length ? `
-    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:1rem;justify-content:center;">
-      ${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
-    </div>
-  ` : "";
+<div class="tag-list" style="margin-top:0.6rem; margin-bottom:3rem;">
+${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
+</div>
+` : "";
 
       // 改行(\n\n)を美しい段落(<p>)に自動整形
       const formattedMeaning = s.meaning
         ? s.meaning.split(/\n\n+/).map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')
         : `<p>${s.meaning}</p>`;
 
+      const formattedSummary = s.summary
+        ? s.summary.split(/\n\n+/).map(p => `${p.replace(/\n/g, '<br>')}`).join('')
+        : `${s.summary}`;
+
       const hasEps = s.episodes && s.episodes.length;
       const eps = hasEps ? s.episodes.map(ep => {
         const volBadge = ep.vol ? `<span class="eyebrow">${ep.vol}</span>` : '';
         const artistsHtml = ep.artists && ep.artists.length ? `
-          <div class="tag-list">
-            ${ep.artists.map(a => `<span class="tag-pill"># ${a}</span>`).join('')}
-          </div>
-        ` : '';
+<div class="tag-list">
+${ep.artists.map(a => `<span class="tag-pill">${a}</span>`).join('')}
+</div>
+` : '';
 
         return `
-          <div class="ep-card">
-            <div class="ep-card-top">
-              ${volBadge}
-              <div class="ep-card-title">${ep.title}</div>
-            </div>
-            ${artistsHtml}
-            <a class="ep-link-btn" href="${ep.url || '#'}" target="_blank" rel="noopener">
-              <span>Instagramで読む</span>
-              <i class="fa-solid fa-up-right-from-square"></i>
-            </a>
-          </div>
-        `;
+<div class="ep-card">
+<div class="ep-card-top">
+${volBadge}
+<div class="ep-card-title">${ep.title}</div>
+</div>
+${artistsHtml}
+<a class="ep-link-btn" href="${ep.url || '#'}" target="_blank" rel="noopener">
+<span>Instagramで読む</span>
+<i class="fa-solid fa-up-right-from-square"></i>
+</a>
+</div>
+`;
       }).join("") : ``;
 
       viewEl.innerHTML = `
-    <section class="section no-border slide" style="background:var(--cream);padding-bottom:0;">
-      <div style="text-align:center;">
-        ${bigIcon}
-        <h1>${s.name}</h1>
-        ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
-        ${tagsDetailHtml}
-        ${s.image ? `<img class="detail-article-image" src="assets/scene/${s.image}.png" onload="this.classList.add('is-loaded')">` : ''}
-        <div class="detail-article-card">
-          <div class="detail-article-body">
-            ${formattedMeaning}
-          </div>
-        </div>
-      </div>
-      ${hasEps ? `<div class="mode-hint" style="margin:2rem 0 0.5rem; text-align:left;">「${s.name}」に関連する漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
-    </section>
-  `;
-    }
-
-    function renderLoading() {
-      viewEl.innerHTML = `
-    <section class="section center pop" style="background:var(--white); padding:3rem 1.5rem;">
-      <p class="lead" style="text-align:center;">読み込み中…</p>
-    </section>
-  `;
-    }
-
-    function renderGate(kind) {
-      topbarEl.innerHTML = "";
-      const copy = {
-        notline: {
-          eyebrow: "OPEN IN LINE",
-          title: "このページは<br>LINEの中だけで<br>見ることができます",
-          body: "お手数ですが、<br>公式アカウントのトーク画面から<br>もう一度ひらいてください。",
-          showBtn: false
-        },
-        notfriend: {
-          eyebrow: "LINE ONLY",
-          title: "このページは<br>miruha公式アカウントの<br>限定コンテンツです",
-          body: "下のボタンから友だち追加して、<br>トーク画面のメニューから<br>もう一度ひらいてください。",
-          showBtn: true
-        },
-        error: {
-          eyebrow: "ERROR",
-          title: "うまく読み込めません<br>でした",
-          body: "少し時間をおいて、<br>もう一度開いてみてください。",
-          showBtn: false
-        }
-      }[kind];
-
-      viewEl.innerHTML = `
-    <section class="hero pop">
-      <img class="logo" src="assets/logo-black.png" alt="miruha">
-      <h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
-    </section>
-    <section class="section center pop" style="background:var(--mustard);">
-      <div class="eyebrow" style="background:var(--green);">${copy.eyebrow}</div>
-      <h2>${copy.title}<br><i class="fa-solid fa-lock"></i></h2>
-      <p class="lead" style="margin-bottom:0;">${copy.body}</p>
-      ${copy.showBtn ? `<a class="ep-link-btn" href="${OFFICIAL_ACCOUNT_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-user-plus"></i> 友だち追加する</a>` : ""}
-    </section>
-  `;
+<section class="section no-border slide" style="background:var(--cream);padding-bottom:0;">
+<div style="text-align:center;">
+${bigIcon}
+<h1>${s.name}</h1>
+${formattedSummary ? `<div class="lead">${formattedSummary}</div>` : ''}
+<div class="detail-article-card">
+<div class="detail-article-body">
+${formattedMeaning}
+</div>
+</div>
+${tagsDetailHtml}
+</div>
+${hasEps ? `<div class="mode-hint" style="margin:1.5rem 0 0.5rem; text-align:left;">「${s.name}」をテーマにした漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
+</section>
+`;
     }
 
     async function bootWithLiff() {
