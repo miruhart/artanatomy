@@ -1059,8 +1059,8 @@
       // 1. User-Agentによる判定（LINEアプリ内で開かれているか即時チェック）
       const isLineApp = /Line/i.test(navigator.userAgent);
       if (isLineApp) {
-        const lineBtn = document.getElementById("floatLineBtn");
-        if (lineBtn) lineBtn.style.display = "none";
+        const floatBtn = document.getElementById("floatBtn");
+        if (floatBtn) floatBtn.style.display = "none";
       }
 
       // 2. LIFFの初期化処理
@@ -1068,8 +1068,8 @@
         try {
           await liff.init({ liffId: LIFF_ID });
           if (liff.isInClient()) {
-            const lineBtn = document.getElementById("floatBtn");
-            if (lineBtn) lineBtn.style.display = "none";
+            const floatBtn = document.getElementById("floatBtn");
+            if (floatBtn) floatBtn.style.display = "none";
           }
         } catch (e) {
           console.warn("[miruha] LIFF init failed (ignored):", e);
