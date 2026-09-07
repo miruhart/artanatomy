@@ -61,7 +61,7 @@
 
     .page {
       position: relative;
-      padding: 1rem;
+      padding: 1rem 1rem 6rem;
       width: 100%;
       max-width: var(--max-width);
       overflow: hidden;
@@ -189,6 +189,7 @@
       font-weight: 900;
       line-height: 1.45;
       letter-spacing: 0.01em;
+      margin-bottom: 1.4rem;
     }
 
     .hero h1 .hl {
@@ -562,6 +563,64 @@
       border-radius: 10rem;
       justify-content: center;
     }
+
+    /* ---- 常時表示のLINE・Instagram導線 ---- */
+    .float-cta {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 2.4rem 0.8rem 0.8rem;
+      flex-wrap: wrap;
+      z-index: 100;
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .float-cta p {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: var(--line);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .float-btn {
+      flex: 1;
+      height: 3.8rem;
+      border-radius: var(--border-radius);
+      border: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      color: var(--white);
+      box-shadow: var(--box-shadow);
+      text-decoration: none;
+      transition: transform 120ms ease;
+    }
+
+    .float-btn i {
+      font-size: 1.3em;
+    }
+
+    .float-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 var(--line);
+    }
+
+    .float-line {
+      background: #06C755;
+    }
+
+    .float-ig {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
   </style>
 </head>
 
@@ -571,9 +630,22 @@
     <div id="topbar"></div>
     <div id="view"></div>
     <footer class="footer">
-      <img class="logo" src="assets/logo-black.png" alt="miruha">
+      <a href="https://miruhart.github.io/links/" target="_blank"><img class="logo" src="assets/logo-black.png"
+          alt="miruha"></a>
       <p>アートは知ると、おもしろい。</p>
     </footer>
+  </div>
+
+  <div class="float-cta">
+    <a class="float-btn float-line" id="floatLineBtn" href="https://lin.ee/sMso5Lw" target="_blank" rel="noopener"
+      aria-label="LINE友だち追加">
+      <i class="fa-brands fa-line"></i>公式LINE
+    </a>
+    <a class="float-btn float-ig" href="https://www.instagram.com/miruha_art/" target="_blank" rel="noopener"
+      aria-label="Instagramをフォロー">
+      <i class="fa-brands fa-instagram"></i>Instagram
+    </a>
+    <p>このページはLINE登録者の特典コンテンツです。</p>
   </div>
 
   <script src="data/stages.js"></script>
@@ -584,16 +656,13 @@
     const LIFF_ID = "YOUR_LIFF_ID_HERE";
     // const LIFF_ID = "2011044763-E60QgPYS";
     const OFFICIAL_ACCOUNT_URL = "https://lin.ee/sMso5Lw";
-
+    const INSTAGRAM_URL = "https://www.instagram.com/miruha.art";
     const CATEGORIES = STAGE1_DATA.categories;
     const SUBS = STAGE1_DATA.subs;
     const EMOTIONS = STAGE1_DATA.emotions;
-
     const IG_ICON = `<svg class="ig" style="fill:#fff; width:1.1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>`;
 
     // 全49項目のサブ要素データ（詳細解説文を約2倍〜2.5倍の豊かで深い長文へアップデート）
-
-
     // 各オノマトペ・感情ワードごとの個別解説データ
     const WORD_DESCRIPTIONS = {
       // 没入・安心
@@ -663,7 +732,8 @@
       topbarEl.innerHTML = "";
       let html = `
     <section class="hero pop">
-      <img class="logo" src="assets/logo-black.png" alt="miruha">
+      <a href="https://miruhart.github.io/links/" target="_blank"><img class="logo" src="assets/logo-black.png"
+          alt="miruha"></a>
       <h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
     </section>
   `;
@@ -972,39 +1042,23 @@
     }
 
     async function bootWithLiff() {
-      renderLoading();
+      // LINEの中かどうか・友だち状態に関わらず、中身は常に見られるようにする。
+      // LIFFはエラーが出ても無視して、そのままアプリを表示する。
+      history.replaceState({ view: "home" }, "");
+      renderHome();
 
-      // LIFF IDが未設定の間はゲートをかけず、開発中の見た目確認をそのまま続けられるようにする
-      if (!LIFF_ID || LIFF_ID === "YOUR_LIFF_ID_HERE") {
-        console.warn("[miruha] LIFF_ID が未設定です。友だち限定ゲートはスキップされています。");
-        history.replaceState({ view: "home" }, "");
-        renderHome();
-        return;
-      }
-
-      try {
-        await liff.init({ liffId: LIFF_ID });
-
-        if (!liff.isInClient()) {
-          renderGate("notline");
-          return;
+      if (LIFF_ID && LIFF_ID !== "YOUR_LIFF_ID_HERE") {
+        try {
+          await liff.init({ liffId: LIFF_ID });
+          // LINEアプリの中で開いている場合は、もう追加できているはずなので
+          // LINEの導線ボタンだけ非表示にする（Instagramは常に表示のまま）
+          if (liff.isInClient()) {
+            const lineBtn = document.getElementById("floatLineBtn");
+            if (lineBtn) lineBtn.style.display = "none";
+          }
+        } catch (e) {
+          console.warn("[miruha] LIFF init failed (ignored):", e);
         }
-
-        if (!liff.isLoggedIn()) {
-          liff.login();
-          return; // login()はリダイレクトするので、ここで処理終了
-        }
-
-        const friendship = await liff.getFriendship();
-        if (friendship.friendFlag) {
-          history.replaceState({ view: "home" }, "");
-          renderHome();
-        } else {
-          renderGate("notfriend");
-        }
-      } catch (e) {
-        console.error("[miruha] LIFF init error:", e);
-        renderGate("error");
       }
     }
 
