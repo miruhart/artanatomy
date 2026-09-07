@@ -653,8 +653,8 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     // ==== LIFF設定 ====
-    const LIFF_ID = "YOUR_LIFF_ID_HERE";
-    // const LIFF_ID = "2011044763-E60QgPYS";
+    // const LIFF_ID = "YOUR_LIFF_ID_HERE";
+    const LIFF_ID = "2011044763-E60QgPYS";
     const OFFICIAL_ACCOUNT_URL = "https://lin.ee/sMso5Lw";
     const INSTAGRAM_URL = "https://www.instagram.com/miruha.art";
     const CATEGORIES = STAGE1_DATA.categories;
@@ -947,10 +947,14 @@
     </div>
   ` : "";
 
-      // 改行(\n\n)を美しい段落(<p>)に自動整形
+      // 改行(\n\n)を美しい段落(<>)に自動整形
       const formattedMeaning = s.meaning
         ? s.meaning.split(/\n\n+/).map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')
         : `<p>${s.meaning}</p>`;
+
+      const formattedSummary = s.summary
+        ? s.summary.split(/\n\n+/).map(p => `${p.replace(/\n/g, '<br>')}`).join('')
+        : `${s.summary}`;
 
       const hasEps = s.episodes && s.episodes.length;
       const eps = hasEps ? s.episodes.map(ep => {
@@ -981,7 +985,7 @@
       <div style="text-align:center;">
         ${bigIcon}
         <h1>${s.name}</h1>
-        ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
+        ${formattedSummary ? `<div class="lead" style="color: var(--sub);">${formattedSummary}</div>` : ''}
         ${tagsDetailHtml}
         ${s.image ? `<img class="detail-article-image" src="assets/scene/${s.image}.png" onload="this.classList.add('is-loaded')">` : ''}
         <div class="detail-article-card">
@@ -1041,16 +1045,20 @@
     }
 
     async function bootWithLiff() {
-      // LINEの中かどうか・友だち状態に関わらず、中身は常に見られるようにする。
-      // LIFFはエラーが出ても無視して、そのままアプリを表示する。
       history.replaceState({ view: "home" }, "");
       renderHome();
 
+      // 1. User-Agentによる判定（LINEアプリ内で開かれているか即時チェック）
+      const isLineApp = /Line/i.test(navigator.userAgent);
+      if (isLineApp) {
+        const lineBtn = document.getElementById("floatLineBtn");
+        if (lineBtn) lineBtn.style.display = "none";
+      }
+
+      // 2. LIFFの初期化処理
       if (LIFF_ID && LIFF_ID !== "YOUR_LIFF_ID_HERE") {
         try {
           await liff.init({ liffId: LIFF_ID });
-          // LINEアプリの中で開いている場合は、もう追加できているはずなので
-          // LINEの導線ボタンだけ非表示にする（Instagramは常に表示のまま）
           if (liff.isInClient()) {
             const lineBtn = document.getElementById("floatLineBtn");
             if (lineBtn) lineBtn.style.display = "none";
