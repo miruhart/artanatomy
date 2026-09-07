@@ -221,7 +221,7 @@ const STAGE1_DATA = {
       emotions: ["excite"],
       swatch: "linear-gradient(90deg, #e5484d, #3b6fd4)",
       image: "warmcool",
-      summary: "画面の温度差でダイレクトに感情をゆさぶる",
+      summary: "画面の温度差で\nダイレクトに感情をゆさぶる",
       tags: ["#ドキドキ", "#ハッとする", "#テンションが上がる"],
       meaning: "赤や黄色の暖かさと、青や水色のひんやり感。人間は色を見るだけで「肌の温度」を感覚的に感じ取ります。絵の中の温度差を利用することで、見る人の体感温度や心持ちを直接ゆさぶるテクニックです。"
     },
@@ -229,7 +229,7 @@ const STAGE1_DATA = {
       key: "complementary", name: "補色", icon: "circle-half-stroke", cat: "color",
       emotions: ["intellectual"],
       swatch: "linear-gradient(90deg, #e5484d, #4caf6a)",
-      summary: "正反対の色を並べてお互いを極限まで輝かせる",
+      summary: "正反対の色を並べて\nお互いを極限まで輝かせる",
       image: "complementary",
       tags: ["#ハッとする", "#ピタッとはまる", "#なるほど！"],
       meaning: "色の図（色相環）で真反対に位置する赤と緑、青とオレンジなどを隣り合わせる仕掛けです。お互いの色が存在感を打ち消し合うどころか爆発的に高め合い、目がチカチカするほど鮮やかなインパクトを生み出します。",
@@ -246,7 +246,7 @@ const STAGE1_DATA = {
       key: "gradation", name: "空の色", icon: "cloud-sun", cat: "color",
       emotions: ["immersed", "relaxed"],
       swatch: "linear-gradient(180deg, #ff8a3d, #8b5fbf)",
-      summary: "刻々と変わる空の表情で物語の運命を告げる",
+      summary: "刻々と変わる空の表情で\n物語の運命を告げる",
       image: "gradation",
       tags: ["#うっとり", "#引き込まれる", "#しんみり"],
       meaning: "夕暮れから夜へ移り変わる空のように、色がなめらかに変化するグラデーション。画面全体のムードを一瞬で決定づけるだけでなく、「これから何かが起きる」という物語の予感や運命の切なさを静かに物語ります。",
@@ -270,7 +270,7 @@ const STAGE1_DATA = {
     {
       key: "softlight", name: "柔らかな光", icon: "cloud-sun", cat: "light",
       emotions: ["immersed", "relaxed"],
-      summary: "包み込むような光がもたらす穏やかな時間",
+      summary: "包み込むような光がもたらす\n穏やかな時間",
       tags: ["#うっとり", "#ホッとする", "#まったり", "#包まれる"],
       image: "softlight",
       meaning: "薄曇りの日の光や、カーテン越しに差し込む柔らかな日差し。激しい影を作らないおだやかな光線が、画面全体を包み込みます。日常のふとした瞬間を、まるで宝物のように優しく温かい時間に演出する魔法です。",
@@ -294,7 +294,7 @@ const STAGE1_DATA = {
     {
       key: "darkness", name: "暗闇", icon: "moon", cat: "light",
       emotions: ["awe", "unease"],
-      summary: "見えない部分が脳の想像力を刺激する深い闇",
+      summary: "見えない部分が\n脳の想像力を刺激する深い闇",
       image: "darkness",
       tags: ["#ヒヤッとする", "#ざわざわ", "#息を呑む"],
       meaning: "画面の大部分をあえて漆黒の闇で覆い隠す演出です。照らされたわずかな場所に一瞬で目が惹きつけられると同時に、暗くて見えない部分を「どうなっているんだろう」と自分の脳が勝手に想像してドキドキします。",
@@ -310,7 +310,7 @@ const STAGE1_DATA = {
     {
       key: "sacredlight", name: "聖なる光", icon: "sun", cat: "light",
       emotions: ["awe", "immersed"],
-      summary: "暗雲を破って降り注ぐ神聖で特別な一筋の光",
+      summary: "暗雲を破って降り注ぐ\n神聖で特別な一筋の光",
       image: "sacredlight",
       tags: ["#息を呑む", "#ゾクゾク", "#鳥肌が立つ"],
       meaning: "暗い空や天井のすきまから、まっすぐ一筋だけ伸びる眩しい光。人間の力を超えた神様や奇跡の訪れを感じさせます。この光を浴びている人物は、ひと目で「選ばれた特別で神聖な存在だ」と直感できるようになります。",
@@ -332,7 +332,7 @@ const STAGE1_DATA = {
     {
       key: "backlight", name: "逆光", icon: "sun", cat: "light",
       emotions: ["awe", "unease"],
-      summary: "表情を隠し、シルエットで感情を物語る光",
+      summary: "表情を隠し、\nシルエットで感情を物語る光",
       tags: ["#ハッとする", "#ミステリアス", "#ざわざわ"],
       image: "backlight",
       meaning: "被写体の後ろから眩しい光を当てることで、人物の顔をあえて影にする手法です。細かい表情が見えないからこそ、クッキリ浮かび上がるシルエットや佇まいから「何を思っているんだろう」と深く想像させられます。"
@@ -340,7 +340,7 @@ const STAGE1_DATA = {
     {
       key: "chiaroscuro", name: "劇的明暗", icon: "masks-theater", cat: "light",
       emotions: ["awe", "excite"],
-      summary: "暗闇と光の強烈なコントラストが生むドラマ",
+      summary: "暗闇と光の\n強烈なコントラストが生むドラマ",
       tags: ["#息を呑む", "#ドキドキ", "#圧倒される"],
       image: "chiaroscuro",
       meaning: "まるで舞台のスポットライトのように、光が当たる場所と深い影の差を激しくつける技法です。静止しているはずの絵が一瞬で映画のクライマックスシーンのような緊張感に包まれ、迫りくる立体感を生み出します。",
@@ -366,7 +366,7 @@ const STAGE1_DATA = {
     {
       key: "brushstroke", name: "筆跡", icon: "paintbrush", cat: "texture",
       emotions: ["excite"],
-      summary: "画家の腕の動きとパッションがそのまま残る跡",
+      summary: "画家の腕の動きと\nパッションがそのまま残る跡",
       image: "brushstroke",
       tags: ["#血が騒ぐ", "#ワクワク", "#テンションが上がる"],
       meaning: "筆をたたきつけたり素早く走らせたりした勢いを、消さずにそのままキャンバスに残す手法です。画家の手の動きや息づかい、描いた瞬間の激しい情熱がダイレクトに伝わり、見ているこちらの心まで熱くなります。",
@@ -398,7 +398,7 @@ const STAGE1_DATA = {
     {
       key: "sfumato", name: "ぼかし", icon: "cloud", cat: "texture",
       emotions: ["intellectual", "immersed"],
-      summary: "境目を煙のように溶かし、見る人の脳を惑わす",
+      summary: "境目を煙のように溶かし、\n見る人の脳を惑わす",
       tags: ["#うっとり", "#なるほど！", "#モヤモヤ"],
       image: "sfumato",
       meaning: "輪郭線をはっきり描かず、煙のようにふんわり境目を溶かす技法です。あえて形を曖昧にすることで、見ている人の脳が「どんな顔だろう？」と想像して穴埋めしようとするため、じっと引き込まれて離せなくなります。"
@@ -406,7 +406,7 @@ const STAGE1_DATA = {
     {
       key: "hyperdetail", name: "点と集積", icon: "eye", cat: "texture",
       emotions: ["awe", "intellectual"],
-      summary: "小さな点の集合が、離れると輝く絵になる魔法",
+      summary: "小さな点の集合が、\n離れると輝く絵になる魔法",
       image: "hyperdetail",
       tags: ["#息を呑む", "#アハ体験", "#なるほど！"],
       meaning: "細かい点や粒々をぎっしり敷き詰めて描く表現です。近くで見るとただの細かい点の集まりですが、少し離れると脳の中で色彩が自動的に交ざり合い、パッと眩しい光や圧倒的なリアルさとして浮き上がって見えます。",
@@ -422,7 +422,7 @@ const STAGE1_DATA = {
     {
       key: "splatter", name: "飛沫", icon: "paint-roller", cat: "texture",
       emotions: ["excite"],
-      summary: "飛び散る絵の具に刻まれたダイナミックな身体運動",
+      summary: "飛び散る絵の具に刻まれた\nダイナミックな身体運動",
       image: "splatter",
       tags: ["#ドキドキ", "#血が騒ぐ", "#ハッとする"],
       meaning: "画家がキャンバスに向かって絵の具を弾いたり叩きつけたりする、ダイナミックな手法です。画家の全身のダイナミックな動きや飛び散るエネルギーがそのまま画面に定着し、見る人の身体をゾクゾク刺激します。",
@@ -440,7 +440,7 @@ const STAGE1_DATA = {
     {
       key: "horizon", name: "水平線", icon: "grip-lines", cat: "composition",
       emotions: ["relaxed", "immersed"],
-      summary: "まっすぐな横線がもたらす揺るぎない安定と安心",
+      summary: "まっすぐな横線がもたらす\n揺るぎない安定と安心",
       tags: ["#ホッとする", "#すっきり", "#広々", "#包まれる"],
       image: "horizon",
       meaning: "画面を横切るまっすぐな線（水平線）は、地球の重力を感じさせる最も安定したラインです。この線が一本通っているだけで、私たちの心はすーっと落ち着き、目の前にどこまでも続く開放的な広がりを感じ取れます。",
@@ -456,7 +456,7 @@ const STAGE1_DATA = {
     {
       key: "center", name: "中心配置", icon: "bullseye", cat: "composition",
       emotions: ["awe", "intellectual"],
-      summary: "ど真ん中にどんと置いて視線を釘付けにする",
+      summary: "ど真ん中にどんと置いて\n視線を釘付けにする",
       tags: ["#ハッとする", "#圧倒される", "#なるほど！"],
       image: "center",
       meaning: "見せたい主役を画面のど真ん中に大きくドカンと置くシンプルな配置です。脇目に逸れるすきを与えず、見る人の視線を強制的にロックします。逃げ場のないインパクトと、威厳ある圧倒的な存在感をストレートに伝えます。",
@@ -473,14 +473,14 @@ const STAGE1_DATA = {
       key: "triangle", name: "三角形", icon: "shapes", cat: "composition",
       emotions: ["intellectual"],
       image: "triangle",
-      summary: "安定したピラミッド型が作る揺るぎない秩序",
+      summary: "安定したピラミッド型が作る\n揺るぎない秩序",
       tags: ["#ホッとする", "#ピタッとはまる", "#すっきり"],
       meaning: "底辺がどっしり広く、上が尖ったピラミッドのような三角形の形。人間はこれを見ると直感的に「絶対に倒れない」と安心します。画面の中に三角形を作ることで、静かで崩れない完璧な秩序と安定感を生むのです。"
     },
     {
       key: "diagonal", name: "斜線", icon: "slash", cat: "composition",
       emotions: ["excite"],
-      summary: "ななめのラインが画面を切り裂くスピード感",
+      summary: "ななめのラインが\n画面を切り裂くスピード感",
       tags: ["#ドキドキ", "#スカッとする", "#ハッとする"],
       image: "diagonal",
       meaning: "画面の中に斜めの線をすっと滑り込ませる技法です。まっすぐな縦横の線と違って「倒れそうなアンバランスさ」を感じさせるため、静止した絵の中にハッとするようなスピード感や、一瞬の激しい動きが生まれます。"
@@ -488,7 +488,7 @@ const STAGE1_DATA = {
     {
       key: "goldenratio", name: "黄金比", icon: "compass-drafting", cat: "composition",
       emotions: ["intellectual"],
-      summary: "脳が自然と『きれい！』と感じる究極の黄金バランス",
+      summary: "脳が自然と「きれい！」と感じる\n究極の黄金バランス",
       tags: ["#ピタッとはまる", "#なるほど！", "#すっきり"],
       image: "goldenratio",
       meaning: "パルテノン神殿や貝殻の渦巻きにも隠されている「人間が最も美しく感じる特別の比率（約1:1.618）」です。この比率で配置された画面を見ると、頭で理由を考えなくても直感的に「整っていて気持ちいい！」と感じます。"
@@ -496,7 +496,7 @@ const STAGE1_DATA = {
     {
       key: "onepoint", name: "一点透視", icon: "vector-square", cat: "composition",
       emotions: ["relaxed", "intellectual"],
-      summary: "遠くのひとつの点へ向かって吸い込まれる空間",
+      summary: "遠くのひとつの点へ向かって\n吸い込まれる空間",
       image: "onepoint",
       tags: ["#引き込まれる", "#スカッとする", "#なるほど！"],
       meaning: "画面の中のすべての線が、遠くの「ひとつの点」に向かってまっすぐ収束していく描き方です。線に導かれるように視線が奥へ奥へとスコーーーンと引き込まれ、まるで自分がその空間に立っているような臨場感を味わえます。",
@@ -512,7 +512,7 @@ const STAGE1_DATA = {
     {
       key: "depth", name: "奥行き", icon: "layer-group", cat: "composition",
       emotions: ["immersed", "awe"],
-      summary: "平面のキャンバスを突き抜けて広がる果てしない大空間",
+      summary: "平面のキャンバスを突き抜けて広がる\n果てしない大空間",
       image: "depth",
       tags: ["#引き込まれる", "#広々", "#圧倒される"],
       meaning: "平らな布（キャンバス）の上に、色の濃淡や手前と奥の物の大きさの差を使って「果てしない空間」を幻視させる技法です。目の前にある額縁を突き抜けて、どこまでも歩いていけそうな広大な世界を作り出します。",
@@ -534,7 +534,7 @@ const STAGE1_DATA = {
     {
       key: "asymmetry", name: "崩し", icon: "scale-unbalanced", cat: "composition",
       emotions: ["unease"],
-      summary: "あえてバランスを崩して心を引きつける揺らぎ",
+      summary: "あえてバランスを崩して\n心を引きつける揺らぎ",
       tags: ["#ざわざわ", "#ハッとする", "#落ち着かない"],
       image: "asymmetry",
       meaning: "きれいに左右対称にするのではなく、あえて物の位置や大きさを崩してアンバランスにする手法です。完璧な安定を破ることで脳に「おや？」と思わせ、画面にフレッシュな動きや目が離せないドキドキ感を生み出します。",
@@ -550,7 +550,7 @@ const STAGE1_DATA = {
     {
       key: "framing", name: "枠取り", icon: "crop", cat: "composition",
       emotions: ["intellectual", "immersed"],
-      summary: "手前の枠越しに見せることで高まる「のぞき見」感",
+      summary: "手前の枠越しに見せることで\n高まる「のぞき見」感",
       image: "framing",
       tags: ["#引き込まれる", "#のぞき見", "#なるほど！"],
       meaning: "手前に柱や窓枠、樹木などを置き、その奥にある主役を「囲い込む」ように見せる技法です。まるで物陰からこっそり秘密のシーンをのぞき見しているような感覚になり、一気に作品の世界へ意識が引き込まれます。"
@@ -558,7 +558,7 @@ const STAGE1_DATA = {
     {
       key: "crowd", name: "群衆", icon: "users", cat: "composition",
       emotions: ["excite", "unease"],
-      summary: "画面いっぱいにひしめく人々が放つ圧倒的な熱気",
+      summary: "画面いっぱいにひしめく人々が放つ\n圧倒的な熱気",
       tags: ["#そわそわする", "#テンションが上がる", "#圧倒される"],
       image: "crowd",
       meaning: "画面の中にたくさんの人々をぎゅうぎゅうに描き込む手法です。どこを見ればいいか目移りさせることで、お祭りや事件の現場に巻き込まれたかのような熱気、混乱、そして圧倒的なエネルギーの渦を感じさせます。",
@@ -576,7 +576,7 @@ const STAGE1_DATA = {
     {
       key: "hands", name: "指先", icon: "hand", cat: "mirror",
       emotions: ["intellectual", "immersed"],
-      summary: "表情以上に心の深い本音や悲しみを語る手の表情",
+      summary: "表情以上に心の深い本音や\n悲しみを語る手の表情",
       tags: ["#なるほど！", "#ハッとする", "#引き込まれる"],
       image: "hands",
       meaning: "ギュッと握りしめられた拳や、力なく垂れ下がった指先。人の手や指のポーズは、顔のつくられた表情以上にその人の本心や祈りを物語ります。言葉のない手のしぐさを見ることで、胸の奥の感情がダイレクトに届きます。",
@@ -592,7 +592,7 @@ const STAGE1_DATA = {
     {
       key: "stretch", name: "伸び", icon: "person-rays", cat: "mirror",
       emotions: ["relaxed"],
-      summary: "からだを大きく反らすポーズがつくる解放の心地よさ",
+      summary: "からだを大きく反らすポーズがつくる\n解放の心地よさ",
       tags: ["#スカッとする", "#軽やか", "#開放感"],
       image: "stretch",
       meaning: "体を大きく反らせたり、両手を空へ向かって伸ばしたりするポーズ。絵の中の人の伸びやかな姿を見つめていると、自分の体まで一緒にキュッと伸びたような感覚になり、胸が広がってスーッと深い呼吸ができます。"
@@ -600,7 +600,7 @@ const STAGE1_DATA = {
     {
       key: "languid", name: "脱力", icon: "bed", cat: "mirror",
       emotions: ["relaxed"],
-      summary: "全身の力をぬいた無防備さが伝えるリラックス感",
+      summary: "全身の力をぬいた無防備さが伝える\nリラックス感",
       image: "languid",
       tags: ["#まったり", "#ホッとする", "#スカッとする"],
       meaning: "重力に身をまかせてダラリと力を抜いたポーズや、まどろむ姿。全身の緊張が解けきった無防備な身体を見ていると、見ているこちらの肩の力までふっと抜け、まったりとしたリラックス感が心地よく伝染してきます。"
@@ -608,7 +608,7 @@ const STAGE1_DATA = {
     {
       key: "embrace", name: "抱擁", icon: "hands-holding-child", cat: "mirror",
       emotions: ["immersed"],
-      summary: "ぎゅっと抱きしめる姿から溢れる強い愛とぬくもり",
+      summary: "ぎゅっと抱きしめる姿から溢れる\n強い愛とぬくもり",
       image: "embrace",
       tags: ["#うっとり", "#包まれる", "#引き込まれる"],
       meaning: "誰かをぎゅっと強く抱きしめるポーズは、あふれる愛や人肌の温もりをストレートに伝えてくれます。見ているだけで自分まで優しく包み込まれたような安心感に浸れる一方で、「絶対に離さない」という強い絆も物語ります。",
@@ -624,7 +624,7 @@ const STAGE1_DATA = {
     {
       key: "gaze", name: "視線", icon: "eye", cat: "mirror",
       emotions: ["unease", "intellectual"],
-      summary: "だれかの視線を無意識に追いかけてしまう人間の心理",
+      summary: "だれかの視線を無意識に追いかけてしまう\n人間の心理",
       image: "gaze",
       tags: ["#ざわざわ", "#ハッとする", "#落ち着かない"],
       meaning: "人は他人がどこを見ているか無意識に気になって追いかけてしまう習性があります。絵の中の人物の目線をたどることで隠されたストーリーに気づいたり、逆にこちらをじっと見つめ返されることでハッとしたりします。"
@@ -632,7 +632,7 @@ const STAGE1_DATA = {
     {
       key: "facingaway", name: "背中", icon: "user-slash", cat: "mirror",
       emotions: ["immersed", "unease"],
-      summary: "後ろ姿に自分を重ね、絵の世界へ一緒に没入する",
+      summary: "後ろ姿に自分を重ね、\n絵の世界へ一緒に没入する",
       image: "facingaway",
       tags: ["#引き込まれる", "#うっとり", "#しんみり"],
       meaning: "私達に背中を向けた人物は、絵の中に立つ「自分の身代わり」です。その人の肩越しに同じ景色を見つめることで、外側から眺めているのではなく、自分自身が絵の主人公になってその世界に入り込んだ体験ができます。"
@@ -640,7 +640,7 @@ const STAGE1_DATA = {
     {
       key: "pain", name: "痛み", icon: "heart-crack", cat: "mirror",
       emotions: ["unease"],
-      summary: "人の痛む姿を見るだけで自分の身体まで疼く共感",
+      summary: "人の痛む姿を見るだけで\n自分の身体まで疼く共感",
       image: "pain",
       tags: ["#ヒヤッとする", "#ざわざわ", "#ゾクゾク"],
       meaning: "傷ついた身体や苦痛に歪む顔を見ると、脳のミラーニューロンが働いて自分の胸までヒヤッと痛む感覚になります。他人の痛みを自分の体験として錯覚してしまうほどの強い共感が、忘れられない強烈な体験を残します。",
@@ -656,7 +656,7 @@ const STAGE1_DATA = {
     {
       key: "silence", name: "沈黙", icon: "comment-slash", cat: "mirror",
       emotions: ["immersed", "unease"],
-      summary: "会話のない空間に漂う、重く気まずい空気感",
+      summary: "会話のない空間に漂う、\n重く気まずい空気感",
       image: "silence",
       tags: ["#モヤモヤ", "#ヒヤッとする", "#落ち着かない"],
       meaning: "同じ部屋にいるのに誰とも目が合わない人々。静まり返った場面に漂う「言葉のなさ」や人間同士の微妙な距離感が、二人の関係性を雄弁に物語ります。静寂だからこそ伝わってくる重たい空気に、胸がざわざわします。",
@@ -674,7 +674,7 @@ const STAGE1_DATA = {
     {
       key: "deform", name: "歪み", icon: "wand-magic-sparkles", cat: "gap",
       emotions: ["unease", "intellectual"],
-      summary: "体の形をわざとゆがめ、現実を超えた美しさを生む",
+      summary: "体の形をわざとゆがめ、\n現実を超えた美しさを生む",
       tags: ["#ざわざわ", "#モヤモヤ", "#なるほど！"],
       image: "deform",
       meaning: "首や手足を現実の人間ではありえないほど長く伸ばしたり、形をゆがめたりする表現です。リアルな形からずらすことで生まれる違和感が脳を刺激し、「なぜこう描いたんだろう？」と作品の魅力を探らせるフックになります。",
@@ -690,7 +690,7 @@ const STAGE1_DATA = {
     {
       key: "grid", name: "反復", icon: "border-all", cat: "gap",
       emotions: ["unease", "intellectual"],
-      summary: "同じ模様のループが脳をクラクラさせ無限へ誘う",
+      summary: "同じ模様のループが\n脳をクラクラさせ無限へ誘う",
       tags: ["#ざわざわ", "#落ち着かない", "#クラクラする"],
       image: "grid",
       meaning: "同じマークや模様が、ずらりと果てしなく繰り返される仕掛けです。どこまでも続くパターンを見つめていると、自分のいる場所の境界線がだんだん分からなくなり、無限に広がる宇宙へ吸い込まれるような感覚に陥ります。",
@@ -706,7 +706,7 @@ const STAGE1_DATA = {
     {
       key: "stillmotion", name: "静と動", icon: "bolt", cat: "gap",
       emotions: ["awe", "intellectual"],
-      summary: "止まった一瞬の中にひそむ、次の瞬間の激しい動き",
+      summary: "止まった一瞬の中にひそむ、\n次の瞬間の激しい動き",
       tags: ["#息を呑む", "#ゾクゾク", "#ハッとする"],
       image: "stillmotion",
       meaning: "完全にかたまった静かな絵の中に、風になびく服や飛び散る水滴を描く手法です。「次の瞬間に大きく動くぞ」というエネルギーを閉じ込めることで、静けさの中に鮮烈な動きの予感が生まれ、目が離せなくなります。"
@@ -714,7 +714,7 @@ const STAGE1_DATA = {
     {
       key: "float", name: "浮遊感", icon: "feather", cat: "gap",
       emotions: ["relaxed"],
-      summary: "重力から解き放たれ、空へ浮かび上がるような快感",
+      summary: "重力から解き放たれ、\n空へ浮かび上がるような快感",
       tags: ["#開放感", "#軽やか", "#スカッとする"],
       image: "float",
       meaning: "本来なら地面に立つはずの人が、空中にふわふわと浮かんでいる描写です。ずっしり重い絵の具で描かれているからこそ、「重力を無視して浮かぶ」ギャップが際立ち、見る人の身体まで軽やかに解放してくれます。",
@@ -730,7 +730,7 @@ const STAGE1_DATA = {
     {
       key: "ruins", name: "廃墟", icon: "monument", cat: "gap",
       emotions: ["awe", "unease"],
-      summary: "崩れゆく建物が伝える、時間の儚さと壮大なドラマ",
+      summary: "崩れゆく建物が伝える、\n時間の儚さと壮大なドラマ",
       tags: ["#息を呑む", "#引き込まれる", "#しんみり"],
       image: "ruins",
       meaning: "かつて繁栄した建物が草木に覆われ、ボロボロに崩れていく姿。滅びゆく寂しさと自然の壮大さという相反する感情が交ざり合い、「形あるものはいつか消える」という歴史のロマンと儚い美しさに強く惹きつけられます。",
@@ -746,7 +746,7 @@ const STAGE1_DATA = {
     {
       key: "lifeanddeath", name: "生命感", icon: "heart-pulse", cat: "gap",
       emotions: ["awe", "excite"],
-      summary: "ただの絵の具なのに、今にも動き出しそうな命の拍動",
+      summary: "ただの絵の具なのに、\n今にも動き出しそうな命の拍動",
       tags: ["#ドキドキ", "#血が騒ぐ", "#圧倒される"],
       image: "lifeanddeath",
       meaning: "単なる絵の具とキャンバスで作られた画面から、まるで今までに呼吸をして血が通っているかのような「生の気配」が迫ってくる仕掛けです。物質であることを超えて、画面の向こうから命の力強さが飛び出してきます。",
@@ -762,7 +762,7 @@ const STAGE1_DATA = {
     {
       key: "beautyfear", name: "美と恐怖", icon: "skull", cat: "gap",
       emotions: ["awe", "unease"],
-      summary: "完璧に美しい絵の奥にひそむ、恐ろしい悲劇のゾクゾク感",
+      summary: "完璧に美しい絵の奥にひそむ、\n恐ろしい悲劇のゾクゾク感",
       tags: ["#ゾクゾク", "#ヒヤッとする", "#ざわざわ"],
       image: "beautyfear",
       meaning: "うっとりするほど綺麗な人物や風景の中に、実は恐ろしい事件や毒、悲劇が隠されている仕掛けです。「美しいのに恐ろしい」という激しいギャップに脳が混乱し、背筋が寒くなりながらも惹きつけられてしまいます。",
