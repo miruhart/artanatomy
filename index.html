@@ -20,7 +20,7 @@
   <style>
     :root {
       --line: #1a1a1a;
-      --sub: #2c2c2c;
+      --sub: #393835;
       --brown: #6b6455;
       --white: #FFFFFF;
       --cream: #fbf6ed;
@@ -61,7 +61,7 @@
 
     .page {
       position: relative;
-      padding: 1rem;
+      padding: 1rem 1rem 6rem;
       width: 100%;
       max-width: var(--max-width);
       overflow: hidden;
@@ -104,7 +104,7 @@
       font-weight: 900;
       line-height: 1.4;
       letter-spacing: 0.01em;
-      margin-bottom: 1rem;
+      margin-bottom: 0.4rem;
     }
 
     h2 {
@@ -121,7 +121,7 @@
       font-weight: 600;
       margin-bottom: 1rem;
       color: var(--line);
-      letter-spacing: -0.01em;
+      letter-spacing: 0.01em;
     }
 
     .pop {
@@ -189,6 +189,7 @@
       font-weight: 900;
       line-height: 1.45;
       letter-spacing: 0.01em;
+      margin-bottom: 1.4rem;
     }
 
     .hero h1 .hl {
@@ -330,28 +331,8 @@
       text-align: left;
     }
 
-    .ep-card:nth-child(4n + 2) {
-      background: var(--blue);
-    }
-
-    .ep-card:nth-child(4n + 2) .eyebrow {
+    .ep-card:nth-child(2n) .eyebrow {
       background: var(--green);
-    }
-
-    .ep-card:nth-child(4n + 3) {
-      background: var(--green);
-    }
-
-    .ep-card:nth-child(4n + 3) .eyebrow {
-      background: var(--pink);
-    }
-
-    .ep-card:nth-child(4n) {
-      background: var(--pink);
-    }
-
-    .ep-card:nth-child(4n) .eyebrow {
-      background: var(--mustard);
     }
 
     .ep-card-title {
@@ -386,6 +367,49 @@
     }
 
     /* ---- 詳細ページの長文解説スタイル ---- */
+    .detail-article-image {
+      position: relative;
+      width: calc(100vw + 2rem);
+      height: 100vw;
+      max-width: 32rem;
+      max-height: 32rem;
+      border-radius: 100% 100% 0 0;
+      overflow: hidden;
+      object-fit: cover;
+      margin-bottom: -1rem;
+      z-index: -1;
+      left: 50%;
+      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+
+      /* ▼ 最初は透明にして表示を待つ */
+      opacity: 0;
+    }
+
+    /* ▼ 画像のロードが完了したらアニメーション発火 */
+    .detail-article-image.is-loaded {
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    @media (min-width: 32rem) {
+      .detail-article-image {
+        max-width: 100%;
+      }
+    }
+
+    /* 下から少し持ち上がりながら透過解除 */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
     .detail-article-card {
       background: var(--white);
       border: var(--border);
@@ -400,9 +424,9 @@
       font-size: 1rem;
       line-height: 1.75;
       font-weight: 600;
-      color: var(--sub);
+      color: var(--line);
       margin-bottom: 1rem;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.01em;
     }
 
     .detail-article-body p:last-child {
@@ -471,7 +495,7 @@
       font-size: 1rem;
       font-weight: 700;
       line-height: 1.2;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.01em;
     }
 
     /* ---- 感情タグチップ ---- */
@@ -481,16 +505,17 @@
       gap: 0.3rem;
       width: 100%;
       margin-top: 0.1rem;
+      justify-content: flex-start;
     }
 
     .tag-pill {
       font-size: 0.7rem;
       font-weight: 700;
-      color: #555;
-      background: var(--cream);
-      border: 1px solid var(--line);
+      color: var(--line);
+      background: var(--white);
+      border: 2px solid var(--line);
       border-radius: 999px;
-      padding: 0.2rem 0.4rem;
+      padding: 0.2rem 0.6rem;
       letter-spacing: -0.04em;
       line-height: 1.2;
       white-space: nowrap;
@@ -498,11 +523,7 @@
 
     .tag-pill-lg {
       font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--line);
       letter-spacing: 0.04em;
-      background: var(--white);
-      border: 2px solid var(--line);
       border-radius: 999px;
       padding: 0.5rem 0.75rem;
     }
@@ -609,7 +630,8 @@
     <div id="topbar"></div>
     <div id="view"></div>
     <footer class="footer">
-      <img class="logo" src="assets/logo-black.png" alt="miruha">
+      <a href="https://miruhart.github.io/links/" target="_blank"><img class="logo" src="assets/logo-black.png"
+          alt="miruha"></a>
       <p>アートは知ると、おもしろい。</p>
     </footer>
   </div>
@@ -634,7 +656,7 @@
     const LIFF_ID = "YOUR_LIFF_ID_HERE";
     // const LIFF_ID = "2011044763-E60QgPYS";
     const OFFICIAL_ACCOUNT_URL = "https://lin.ee/sMso5Lw";
-    const INSTAGRAM_URL = "https://www.instagram.com/miruha.art/";
+    const INSTAGRAM_URL = "https://www.instagram.com/miruha.art";
     const CATEGORIES = STAGE1_DATA.categories;
     const SUBS = STAGE1_DATA.subs;
     const EMOTIONS = STAGE1_DATA.emotions;
@@ -683,6 +705,7 @@
       "つながった感じ": "描かれた人物の手のポーズや重なり合う視線を通して、絵の中のドラマだけでなく、絵を描いた画家や自分自身とも固くつながった感覚。"
     };
 
+
     const topbarEl = document.getElementById("topbar");
     const viewEl = document.getElementById("view");
 
@@ -707,23 +730,24 @@
     function renderHome() {
       topbarEl.innerHTML = "";
       let html = `
-<section class="hero pop">
-<img class="logo" src="assets/logo-black.png" alt="miruha">
-<h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
-</section>
-`;
+    <section class="hero pop">
+      <a href="https://miruhart.github.io/links/" target="_blank"><img class="logo" src="assets/logo-black.png"
+          alt="miruha"></a>
+      <h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
+    </section>
+  `;
 
       STAGES.forEach((stage, i) => {
         html += `<section class="section center pop ${stage.active ? "stage-active" : "stage-locked"}" style="animation-delay:${i * 60}ms">
-<div class="eyebrow">${stage.active ? `<i class=\"fa-solid fa-lock-open\"></i> STAGE ${stage.num}` : `<i class=\"fa-solid fa-lock\"></i> STAGE ${stage.num}`}</div>
-<h2>${stage.title}</h2>
-<p class="lead" style="font-size:0.9rem;">${stage.goal}</p>
-${stage.active ? `
-<div class="badge-grid" id="cat-grid"></div>
-<p class="mode-hint" style="margin-top:1.3rem">うまく言葉にならないときは</p>
-<div class="list-col" id="wordrow-${stage.num}"></div>
-` : ""}
-</section>`;
+      <div class="eyebrow">${stage.active ? `<i class=\"fa-solid fa-lock-open\"></i> STAGE ${stage.num}` : `<i class=\"fa-solid fa-lock\"></i> STAGE ${stage.num}`}</div>
+      <h2>${stage.title}</h2>
+      <p class="lead" style="font-size:0.9rem;">${stage.goal}</p>
+      ${stage.active ? `
+        <div class="badge-grid" id="cat-grid"></div>
+        <p class="mode-hint" style="margin-top:1.3rem">うまく言葉にならないときは</p>
+        <div class="list-col" id="wordrow-${stage.num}"></div>
+      ` : ""}
+    </section>`;
       });
 
       viewEl.innerHTML = html;
@@ -752,27 +776,27 @@ ${stage.active ? `
 
     function renderEmotionList() {
       topbarEl.innerHTML = `
-<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>
-`;
+    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>
+  `;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const groups = EMOTIONS.map(em => {
         const badges = em.words.map(w => `<div class="badge-item word-badge" data-em="${em.key}" data-word="${w}"><span class="badge-label">${w}</span></div>`).join("");
         return `
-<div class="genre-label">
-<i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
-<div class="badge-grid word-grid">${badges}</div>
-`;
+      <div class="genre-label">
+        <i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
+      <div class="badge-grid word-grid">${badges}</div>
+    `;
       }).join("");
 
       viewEl.innerHTML = `
-<section class="section slide" style="background:var(--white)">
-<div class="eyebrow"><i class="fa-solid fa-heart"></i> 気持ち・感覚</div>
-<h2>作品を前に、どう感じてる？</h2>
-<p class="lead">その気持ちや感覚は、どんな視覚のしかけにつながっているのかな？</p>
-${groups}
-</section>
-`;
+    <section class="section slide" style="background:var(--white)">
+      <div class="eyebrow"><i class="fa-solid fa-heart"></i> 気持ち・感覚</div>
+      <h2>作品を前に、どう感じてる？</h2>
+      <p class="lead">その気持ちや感覚は、どんな視覚のしかけにつながっているのかな？</p>
+      ${groups}
+    </section>
+  `;
 
       viewEl.querySelectorAll("[data-em]").forEach(row => {
         row.addEventListener("click", () => goto({ view: "emotion", emotion: row.dataset.em, word: row.dataset.word }));
@@ -781,25 +805,25 @@ ${groups}
 
     function renderCategoryList() {
       topbarEl.innerHTML = `
-<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 戻る</button>
-<span class="crumb">Stage1 / 視覚のしかけから</span>
-`;
+      <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 前に戻る</button>
+      <span class="crumb">Stage1 / 視覚のしかけから</span>
+    `;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const rows = CATEGORIES.map(cat => `
-<div class="list-row" data-cat="${cat.key}">
-<span><i class="fa-solid fa-${cat.icon}"></i></span><span class="row-title" style="flex:1">${cat.name}</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-</div>
-`).join("");
+      <div class="list-row" data-cat="${cat.key}">
+        <span><i class="fa-solid fa-${cat.icon}"></i></span><span class="row-title" style="flex:1">${cat.name}</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    `).join("");
 
       viewEl.innerHTML = `
-<section class="section no-border slide" style="background:var(--mustard)">
-<div class="eyebrow"><i class="fa-solid fa-palette"></i> 視覚のしかけから探す</div>
-<h2>気になる「しかけ」をえらんでください</h2>
-<p class="lead">色・光・筆致など、6つの切り口があります。</p>
-<div class="list-col">${rows}</div>
-</section>
-`;
+      <section class="section no-border slide" style="background:var(--mustard)">
+        <div class="eyebrow"><i class="fa-solid fa-palette"></i> 視覚のしかけから探す</div>
+        <h2>気になる「しかけ」をえらんでください</h2>
+        <p class="lead">色・光・筆致など、6つの切り口があります。</p>
+        <div class="list-col">${rows}</div>
+      </section>
+    `;
 
       viewEl.querySelectorAll("[data-cat]").forEach(row => {
         row.addEventListener("click", () => goto({ view: "category", cat: row.dataset.cat }));
@@ -826,8 +850,8 @@ ${groups}
       }
 
       topbarEl.innerHTML = `
-<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 気持ち・感覚に戻る</button>
-`;
+    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 気持ち・感覚に戻る</button>
+  `;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const subBadges = matchedSubs.map(s => {
@@ -837,26 +861,26 @@ ${groups}
           : `<span class="badge-icon" style="background:var(--white)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
         const tagsHtml = s.tags && s.tags.length ? `
-<div class="tag-list">
-${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
-</div>
-` : "";
+      <div class="tag-list">
+        ${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
+      </div>
+    ` : "";
 
         return `<div class="badge-item" data-sub="${s.key}" data-cat="${s.cat}">
-${inner}
-<span class="badge-label">${s.name}</span>
-</div>`;
+      ${inner}
+      <span class="badge-label">${s.name}</span>
+    </div>`;
       }).join("");
 
       viewEl.innerHTML = `
-<section class="section slide">
-<div class="eyebrow"><i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
-<h2>「${heading}」</h2>
-<p class="lead" style="margin-top:0.4rem;">${wordDescription}</p>
-<p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem; color:var(--line);"><i class="fa-solid fa-lightbulb"></i> こんな「しかけ」が関係しているかも</p>
-<div class="badge-grid">${subBadges}</div>
-</section>
-`;
+    <section class="section slide">
+      <div class="eyebrow"><i class="fa-solid fa-${em.icon}"></i> ${em.name}</div>
+      <h2>「${heading}」</h2>
+      <p class="lead" style="margin-top:0.4rem;">${wordDescription}</p>
+      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem;"><i class="fa-solid fa-lightbulb"></i> こんな「しかけ」が関係しているかも</p>
+      <div class="badge-grid">${subBadges}</div>
+    </section>
+  `;
 
       viewEl.querySelectorAll("[data-sub]").forEach(btn => {
         btn.addEventListener("click", () => goto({ view: "sub", sub: btn.dataset.sub, cat: btn.dataset.cat, emotion: emKey }));
@@ -870,7 +894,7 @@ ${inner}
       const gotCount = subs.filter(s => s.episodes && s.episodes.length).length;
 
       topbarEl.innerHTML = `
-<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>`;
+    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> TOPに戻る</button>`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const badges = subs.map(s => {
@@ -879,26 +903,26 @@ ${inner}
           : `<span class="badge-icon" style="background:var(--white)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
         const tagsHtml = s.tags && s.tags.length ? `
-<div class="tag-list">
-${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
-</div>
-` : "";
+      <div class="tag-list">
+        ${s.tags.slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join("")}
+      </div>
+    ` : "";
 
         return `<div class="badge-item" data-sub="${s.key}">
-${inner}
-<span class="badge-label">${s.name}</span>
-</div>`;
+      ${inner}
+      <span class="badge-label">${s.name}</span>
+    </div>`;
       }).join("");
 
       viewEl.innerHTML = `
-<section class="section slide">
-<div class="eyebrow"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</div>
-<h2>${cat.name}のしかけ</h2>
-<p class="lead">${cat.meaning}</p>
-<p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem; color:var(--line);"><i class="fa-solid fa-lightbulb"></i> 例えば、こんな「${cat.name}のしかけ」があるよ</p>
-<div class="badge-grid">${badges}</div>
-</section>
-`;
+    <section class="section slide">
+      <div class="eyebrow"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</div>
+      <h2>${cat.name}のしかけ</h2>
+      <p class="lead">${cat.meaning}</p>
+      <p class="mode-hint" style="margin-top:1.5rem; font-size:0.8rem;"><i class="fa-solid fa-lightbulb"></i> 例えば、こんな「${cat.name}のしかけ」があるよ</p>
+      <div class="badge-grid">${badges}</div>
+    </section>
+  `;
 
       viewEl.querySelectorAll("[data-sub]").forEach(item => {
         item.addEventListener("click", () => goto({ view: "sub", sub: item.dataset.sub, cat: catKey, emotion: emotionKey }));
@@ -910,7 +934,7 @@ ${inner}
       const cat = CATEGORIES.find(c => c.key === (s.cat || catKey)) || { name: "", icon: "star" };
 
       topbarEl.innerHTML = `
-<button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> ${cat.name}に戻る</button>`;
+    <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> 前に戻る</button>`;
       document.getElementById("backBtn").addEventListener("click", () => history.back());
 
       const bigIcon = s.swatch
@@ -918,60 +942,102 @@ ${inner}
         : `<span class="item-icon-big" style="background:var(--pink)"><i class="fa-solid fa-${s.icon || cat.icon}"></i></span>`;
 
       const tagsDetailHtml = s.tags && s.tags.length ? `
-<div class="tag-list" style="margin-top:0.6rem; margin-bottom:3rem;">
-${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
-</div>
-` : "";
+    <div class="tag-list" style="margin-top:0.6rem; margin-bottom:1rem;justify-content:center;">
+      ${s.tags.map(t => `<span class="tag-pill tag-pill-lg">${t}</span>`).join("")}
+    </div>
+  ` : "";
 
       // 改行(\n\n)を美しい段落(<p>)に自動整形
       const formattedMeaning = s.meaning
         ? s.meaning.split(/\n\n+/).map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')
         : `<p>${s.meaning}</p>`;
 
-      const formattedSummary = s.summary
-        ? s.summary.split(/\n\n+/).map(p => `${p.replace(/\n/g, '<br>')}`).join('')
-        : `${s.summary}`;
-
       const hasEps = s.episodes && s.episodes.length;
       const eps = hasEps ? s.episodes.map(ep => {
         const volBadge = ep.vol ? `<span class="eyebrow">${ep.vol}</span>` : '';
         const artistsHtml = ep.artists && ep.artists.length ? `
-<div class="tag-list">
-${ep.artists.map(a => `<span class="tag-pill">${a}</span>`).join('')}
-</div>
-` : '';
+          <div class="tag-list">
+            ${ep.artists.map(a => `<span class="tag-pill"># ${a}</span>`).join('')}
+          </div>
+        ` : '';
 
         return `
-<div class="ep-card">
-<div class="ep-card-top">
-${volBadge}
-<div class="ep-card-title">${ep.title}</div>
-</div>
-${artistsHtml}
-<a class="ep-link-btn" href="${ep.url || '#'}" target="_blank" rel="noopener">
-<span>Instagramで読む</span>
-<i class="fa-solid fa-up-right-from-square"></i>
-</a>
-</div>
-`;
+          <div class="ep-card">
+            <div class="ep-card-top">
+              ${volBadge}
+              <div class="ep-card-title">${ep.title}</div>
+            </div>
+            ${artistsHtml}
+            <a class="ep-link-btn" href="${ep.url || '#'}" target="_blank" rel="noopener">
+              <span>Instagramで読む</span>
+              <i class="fa-solid fa-up-right-from-square"></i>
+            </a>
+          </div>
+        `;
       }).join("") : ``;
 
       viewEl.innerHTML = `
-<section class="section no-border slide" style="background:var(--cream);padding-bottom:0;">
-<div style="text-align:center;">
-${bigIcon}
-<h1>${s.name}</h1>
-${formattedSummary ? `<div class="lead">${formattedSummary}</div>` : ''}
-<div class="detail-article-card">
-<div class="detail-article-body">
-${formattedMeaning}
-</div>
-</div>
-${tagsDetailHtml}
-</div>
-${hasEps ? `<div class="mode-hint" style="margin:1.5rem 0 0.5rem; text-align:left;">「${s.name}」をテーマにした漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
-</section>
-`;
+    <section class="section no-border slide" style="background:var(--cream);padding-bottom:0;">
+      <div style="text-align:center;">
+        ${bigIcon}
+        <h1>${s.name}</h1>
+        ${s.summary ? `<div class="lead" style="color: var(--sub);">${s.summary}</div>` : ''}
+        ${tagsDetailHtml}
+        ${s.image ? `<img class="detail-article-image" src="assets/scene/${s.image}.png" onload="this.classList.add('is-loaded')">` : ''}
+        <div class="detail-article-card">
+          <div class="detail-article-body">
+            ${formattedMeaning}
+          </div>
+        </div>
+      </div>
+      ${hasEps ? `<div class="mode-hint" style="margin:2rem 0 0.5rem; text-align:left;">「${s.name}」に関連する漫画はこちら</div><div class="list-col">${eps}</div>` : eps}
+    </section>
+  `;
+    }
+
+    function renderLoading() {
+      viewEl.innerHTML = `
+    <section class="section center pop" style="background:var(--white); padding:3rem 1.5rem;">
+      <p class="lead" style="text-align:center;">読み込み中…</p>
+    </section>
+  `;
+    }
+
+    function renderGate(kind) {
+      topbarEl.innerHTML = "";
+      const copy = {
+        notline: {
+          eyebrow: "OPEN IN LINE",
+          title: "このページは<br>LINEの中だけで<br>見ることができます",
+          body: "お手数ですが、<br>公式アカウントのトーク画面から<br>もう一度ひらいてください。",
+          showBtn: false
+        },
+        notfriend: {
+          eyebrow: "LINE ONLY",
+          title: "このページは<br>miruha公式アカウントの<br>限定コンテンツです",
+          body: "下のボタンから友だち追加して、<br>トーク画面のメニューから<br>もう一度ひらいてください。",
+          showBtn: true
+        },
+        error: {
+          eyebrow: "ERROR",
+          title: "うまく読み込めません<br>でした",
+          body: "少し時間をおいて、<br>もう一度開いてみてください。",
+          showBtn: false
+        }
+      }[kind];
+
+      viewEl.innerHTML = `
+    <section class="hero pop">
+      <img class="logo" src="assets/logo-black.png" alt="miruha">
+      <h1 class="display">美術解剖図鑑<br><span class="hl">逆引きインデックス</span></h1>
+    </section>
+    <section class="section center pop" style="background:var(--mustard);">
+      <div class="eyebrow" style="background:var(--green);">${copy.eyebrow}</div>
+      <h2>${copy.title}<br><i class="fa-solid fa-lock"></i></h2>
+      <p class="lead" style="margin-bottom:0;">${copy.body}</p>
+      ${copy.showBtn ? `<a class="ep-link-btn" href="${OFFICIAL_ACCOUNT_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-user-plus"></i> 友だち追加する</a>` : ""}
+    </section>
+  `;
     }
 
     async function bootWithLiff() {
